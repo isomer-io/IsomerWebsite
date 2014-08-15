@@ -19,7 +19,8 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    background: url(../img/bg_image.jpg);
+    /*background: url(../img/bg_image.jpg);*/
+    background-color: steelblue;
     height: 600px;
 }
 
@@ -30,7 +31,6 @@
 }
 
 .home-page h1 {
-
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: bold;
     /*color: #f05153;*/
