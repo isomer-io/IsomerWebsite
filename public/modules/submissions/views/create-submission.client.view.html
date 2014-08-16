@@ -1,0 +1,60 @@
+<section data-ng-controller="SubmissionsController">
+    <div class="page-header">
+        <h1>New Submission</h1>
+    </div>
+
+    <div>
+        <h1>
+            Does this describe you?
+        </h1>
+        <p>
+            You see where technology is going and want to be part of the change.
+        </p>
+        <p>
+            You care about solving social problems at the community and global level.
+        </p>
+        <p>
+            You have some technical exposure, but are looking to take it to the next level.
+        </p>
+        <p>
+            You want to combine hard engineering with the creativity of design.
+            In the words of steve jobs "Bridging the gap between science and the humanities."
+        </p>
+        <p>
+            You believe in constantly improving yourself. Life long learning is your mantra.
+        </p>
+        <p>
+            You know that investing in a community creates long term learning.
+            You are looking for a family of like minded people that also expands your worldview.
+        </p>
+    </div>
+
+    <div>
+        <h1>
+            How do we measure up?
+        </h1>
+        <p>
+            We don't offer housing services. We don't do 'career' days. Our
+        </p>
+    </div>
+
+
+    <div class="col-md-12">
+        <form class="form-horizontal" data-ng-submit="create()" novalidate>
+            <fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="name">Name</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="name" id="name" class="form-control" placeholder="Name" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-default">
+                </div>
+				<div data-ng-show="error" class="text-danger">
+					<strong data-ng-bind="error"></strong>
+				</div>
+            </fieldset>
+        </form>
+    </div>
+</section>
