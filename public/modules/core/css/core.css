@@ -39,3 +39,21 @@
     font-size: 60px;
     z-index: 1;
 }
+
+.home-page-details h2 {
+    font-size: 45px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.divider {
+    background-color: black;
+    height: 1px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.home-page-details .why-body {
+
+}
