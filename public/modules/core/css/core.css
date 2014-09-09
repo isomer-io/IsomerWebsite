@@ -1,6 +1,11 @@
 .content {
 	margin-top: 50px;
 }
+
+.navbar-form {
+    border-color: transparent;
+}
+
 .undecorated-link:hover {
 	text-decoration: none;
 }
@@ -14,14 +19,25 @@
     border-color:#78FA89;
 }
 
+.deets {
+    margin: 0 auto;
+    width: 80%;
+}
+
+.deets .col-md-6 div {
+    border-radius: 4px;
+    padding: 5px;
+    background-color: white;
+}
+
 .background-image {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     /*background: url(../img/bg_image.jpg);*/
-    background-color: steelblue;
-    height: 600px;
+    background-color: white;
+    height: 300px;
 }
 
 .home-page img {
@@ -31,19 +47,14 @@
 }
 
 .home-page h1 {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: bold;
     /*color: #f05153;*/
-    color: white;
-    padding-top: 200px;
+    padding-top: 100px;
     font-size: 60px;
     z-index: 1;
 }
 
 .home-page-details h2 {
     font-size: 45px;
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-weight: bold;
     margin-bottom: 40px;
 }
 
