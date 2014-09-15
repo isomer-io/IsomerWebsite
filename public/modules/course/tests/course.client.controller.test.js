@@ -116,7 +116,7 @@
 			expect(scope.name).toEqual('');
 
 			// Test URL redirection after the Program was created
-			expect($location.path()).toBe('/programs/' + sampleProgramResponse._id);
+			expect($location.path()).toBe('/course/' + sampleProgramResponse._id);
 		}));
 
 		it('$scope.update() should update a valid Program', inject(function(Programs) {
@@ -137,7 +137,7 @@
 			$httpBackend.flush();
 
 			// Test URL location to new object
-			expect($location.path()).toBe('/programs/' + sampleProgramPutData._id);
+			expect($location.path()).toBe('/course/' + sampleProgramPutData._id);
 		}));
 
 		it('$scope.remove() should send a DELETE request with a valid programId and remove the Program from the scope', inject(function(Programs) {
