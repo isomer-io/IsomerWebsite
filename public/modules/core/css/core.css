@@ -2,17 +2,90 @@
 	margin-top: 70px;
     height: 100%;
     width: 100%;
+    background-color: ghostwhite;
+}
+
+.page-wrapper {
+    margin: 0 auto;
+    width: 500px;
 }
 
 .atom {
-    width: 100px;
-    height: 100px;
+    width: 200px;
+    height: 200px;
+    background-color: blue;
     border-radius: 50%;
+    position: absolute;
+    text-align: center;
+    color: #f5f5f5;
+}
+
+.home-page i {
+    font-size: 6em;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .home-page .isomer {
-
+    width: 500px;
+    height: 500px;
     position: absolute;
-    
-    background-color: red;
+    left: 35%;
+    top: 35%;
+    background-color: #3b596a;
+    text-align: center;
 }
+
+.home-page .isomer span {
+    font-size: 60px;
+    margin-top: 100px;
+}
+
+.home-page .spacer {
+    margin-top: 50px;
+}
+
+.sub-spacer {
+    margin-top: 20px;
+}
+
+.home-page p {
+    color: #f5f5f5;
+    font-size: 30px;
+}
+
+.home-page .non-profit {
+    left: 20%;
+    top: 20%;
+    background-color: #a1cd73;
+}
+
+.home-page .application-and-theory {
+    background-color: #3f9a82;
+    left: 50%;
+    top: 10%;
+}
+
+.home-page .full-stack {
+    background-color: #427676;
+    left: 20%;
+    top: 60%;
+}
+
+.home-page .community {
+    left: 70%;
+    top: 70%;
+    background-color: #ecdb60;
+}
+
+.home-page .agile {
+    background-color: #3f9a82;
+    left: 70%;
+    top: 40%;
+}
+
+.agile span {
+    color: #f5f5f5;
+    font-size: 20px;
+}
+/*transform: translateY(-50%);*/
