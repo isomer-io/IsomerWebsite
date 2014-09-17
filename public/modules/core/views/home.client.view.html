@@ -24,57 +24,67 @@
             <i class="fa fa-code-fork"></i>
         </article>
 
-    <article class="agile atom panel panel-default">
+    <article class="agile atom panel panel-default" data-ng-mouseover="open()" data-ng-mouseleave="isomer()">
+        <a>
         <div class="sub-spacer">
             <!--<i class="fa fa-group"></i>-->
             <span>
                 Agile & Open Source
             </span>
         </div>
+        </a>
     </article>
 
-    <article class="non-profit atom panel panel-default">
+    <article class="non-profit atom panel panel-default" data-ng-mouseover="nonProfit()" data-ng-mouseleave="isomer()">
+        <a>
         <div class="sub-spacer">
             <!--<i class="fa fa-group"></i>-->
             <span>
                 Non-Profit
             </span>
         </div>
+        </a>
     </article>
 
     <article class="atom application-and-theory panel panel-default">
+        <a>
         <div class="sub-spacer">
             <!--<i class="fa fa-group"></i>-->
             <span>
                 Application Over Theory
             </span>
         </div>
+        </a>
     </article>
 
-    <article class="community atom panel panel-default">
+    <article class="community atom panel panel-default" >
+        <a>
         <div class="sub-spacer">
             <!--<i class="fa fa-group"></i>-->
             <span>
                 Join Our Community
             </span>
         </div>
+        </a>
     </article>
 
-    <article class="full-stack atom panel panel-default">
+    <article class="full-stack atom panel panel-default" data-ng-mouseover="fullStack()" data-ng-mouseleave="isomer()">
+        <a>
         <div class="sub-spacer">
             <!--<i class="fa fa-group"></i>-->
             <span>
                 Full-Stack Awesome
             </span>
         </div>
+        </a>
     </article>
 
     <article class="isomer panel panel-default">
         <div class="spacer">
-            <span>
+            <span data-ng-bind="title">
                 Isomer
             </span>
-            <p>
+            <p data-ng-bind="subtitle">
                 The Open Source, blended classroom, non-profit, project-focused, community driven developer bootcamp.
             </p>
         </div>
