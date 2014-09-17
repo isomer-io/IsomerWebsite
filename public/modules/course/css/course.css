@@ -7,3 +7,53 @@
     font-size: 14em;
     margin: 0 auto;
 }
+
+.course .row {
+    height: 250px;
+}
+
+.course .row:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+    margin-right: -0.25em; /* Adjusts for spacing */
+}
+
+.course .image-wrapper {
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
+    /*transform: translateY(20%);*/
+}
+
+.course .image-wrapper-image {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.course .ss-logo {
+}
+
+.course p {
+    font-size: 18px;
+    margin-bottom: 23px;
+}
+
+.course .meanjs-logo {
+    margin-top: 100px;
+}
+
+.course .col-md-7 {
+    display: inline-block;
+    vertical-align: middle;
+    /*transform: translateY(20%);*/
+}
+
+.course .col-md-5 {
+    vertical-align: middle;
+    display: inline-block;
+}
