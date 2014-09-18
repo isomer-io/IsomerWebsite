@@ -41,99 +41,15 @@ angular.element(document).ready(function () {
   angular.bootstrap(document, [ApplicationConfiguration.applicationModuleName]);
 });'use strict';
 // Use Applicaion configuration module to register a new module
-ApplicationConfiguration.registerModule('articles');'use strict';
-// Use Applicaion configuration module to register a new module
 ApplicationConfiguration.registerModule('core');'use strict';
+// Use applicaion configuration module to register a new module
+ApplicationConfiguration.registerModule('programs');'use strict';
+// Use applicaion configuration module to register a new module
+ApplicationConfiguration.registerModule('submissions');'use strict';
+// Use applicaion configuration module to register a new module
+ApplicationConfiguration.registerModule('subscribers');'use strict';
 // Use Applicaion configuration module to register a new module
 ApplicationConfiguration.registerModule('users');'use strict';
-// Configuring the Articles module
-angular.module('articles').run([
-  'Menus',
-  function (Menus) {
-    // Set top bar menu items
-    Menus.addMenuItem('topbar', 'Articles', 'articles', 'dropdown', '/articles(/create)?');
-    Menus.addSubMenuItem('topbar', 'articles', 'List Articles', 'articles');
-    Menus.addSubMenuItem('topbar', 'articles', 'New Article', 'articles/create');
-  }
-]);'use strict';
-// Setting up route
-angular.module('articles').config([
-  '$stateProvider',
-  function ($stateProvider) {
-    // Articles state routing
-    $stateProvider.state('listArticles', {
-      url: '/articles',
-      templateUrl: 'modules/articles/views/list-articles.client.view.html'
-    }).state('createArticle', {
-      url: '/articles/create',
-      templateUrl: 'modules/articles/views/create-article.client.view.html'
-    }).state('viewArticle', {
-      url: '/articles/:articleId',
-      templateUrl: 'modules/articles/views/view-article.client.view.html'
-    }).state('editArticle', {
-      url: '/articles/:articleId/edit',
-      templateUrl: 'modules/articles/views/edit-article.client.view.html'
-    });
-  }
-]);'use strict';
-angular.module('articles').controller('ArticlesController', [
-  '$scope',
-  '$stateParams',
-  '$location',
-  'Authentication',
-  'Articles',
-  function ($scope, $stateParams, $location, Authentication, Articles) {
-    $scope.authentication = Authentication;
-    $scope.create = function () {
-      var article = new Articles({
-          title: this.title,
-          content: this.content
-        });
-      article.$save(function (response) {
-        $location.path('articles/' + response._id);
-        $scope.title = '';
-        $scope.content = '';
-      }, function (errorResponse) {
-        $scope.error = errorResponse.data.message;
-      });
-    };
-    $scope.remove = function (article) {
-      if (article) {
-        article.$remove();
-        for (var i in $scope.articles) {
-          if ($scope.articles[i] === article) {
-            $scope.articles.splice(i, 1);
-          }
-        }
-      } else {
-        $scope.article.$remove(function () {
-          $location.path('articles');
-        });
-      }
-    };
-    $scope.update = function () {
-      var article = $scope.article;
-      article.$update(function () {
-        $location.path('articles/' + article._id);
-      }, function (errorResponse) {
-        $scope.error = errorResponse.data.message;
-      });
-    };
-    $scope.find = function () {
-      $scope.articles = Articles.query();
-    };
-    $scope.findOne = function () {
-      $scope.article = Articles.get({ articleId: $stateParams.articleId });
-    };
-  }
-]);'use strict';
-//Articles service used for communicating with the articles REST endpoints
-angular.module('articles').factory('Articles', [
-  '$resource',
-  function ($resource) {
-    return $resource('articles/:articleId', { articleId: '@_id' }, { update: { method: 'PUT' } });
-  }
-]);'use strict';
 // Setting up route
 angular.module('core').config([
   '$stateProvider',
@@ -145,7 +61,27 @@ angular.module('core').config([
     $stateProvider.state('home', {
       url: '/',
       templateUrl: 'modules/core/views/home.client.view.html'
+    }).state('tree', {
+      url: '/tree',
+      templateUrl: 'modules/core/views/tree.client.view.html'
+    }).state('planets', {
+      url: '/planets',
+      templateUrl: 'modules/core/views/planets.client.view.html'
     });
+  }
+]);'use strict';
+angular.module('core').controller('FullScreenController', [
+  '$scope',
+  function ($scope) {
+    // Using angular UIs nesting feature, this allows the child scope to
+    // toggle whether or not the 'container' class is being added
+    // for that view
+    $scope.allowFullScreen = function (shouldAllow) {
+      $scope.shouldAllowFullScreen = shouldAllow;
+      this.$on('$destroy', function () {
+        $scope.shouldAllowFullScreen = !shouldAllow;
+      });
+    };
   }
 ]);'use strict';
 angular.module('core').controller('HeaderController', [
@@ -171,21 +107,112 @@ angular.module('core').controller('HomeController', [
   function ($scope, Authentication) {
     // This provides Authentication context.
     $scope.authentication = Authentication;
+    $scope.open = function () {
+      $scope.title = 'Open';
+      $scope.subtitle = 'Our curriculum is free and open source. We use agile development on all projects.';
+    };
+    $scope.isomer = function () {
+      $scope.title = 'Isomer';
+      $scope.subtitle = 'The Open Source, blended classroom, non-profit, project-focused, community driven developer bootcamp.';
+    };
+    $scope.fullStack = function () {
+      $scope.title = 'Full-Stack';
+      $scope.subtitle = 'Understanding the entire stack is an essential engineering skill. From Databases to client, we\'ve got you covered.';
+    };
+    $scope.nonProfit = function () {
+      $scope.title = 'Non-Profit';
+      $scope.subtitle = 'Our aim is to provide the best education as accessibly as possible. Know that your tuition is only being allocated for as efficient of teaching as possible.';
+    };
+    $scope.isomer();
   }
 ]);'use strict';
+angular.module('core').directive('tree', function () {
+  return {
+    restrict: 'A',
+    link: function (scope, element) {
+      var ctx = element[0].getContext('2d');
+      //element[0].width;
+      element[0].height;
+      ctx.fillRect(50, 25, 150, 100);  //            // variable that decides if something should be drawn on mousemove
+                                       //            var drawing = false;
+                                       //
+                                       //            // the last coordinates before the current move
+                                       //            var lastX;
+                                       //            var lastY;
+                                       //
+                                       //            element.bind('mousedown', function(event){
+                                       //                if(event.offsetX!==undefined){
+                                       //                    lastX = event.offsetX;
+                                       //                    lastY = event.offsetY;
+                                       //                } else { // Firefox compatibility
+                                       //                    lastX = event.layerX - event.currentTarget.offsetLeft;
+                                       //                    lastY = event.layerY - event.currentTarget.offsetTop;
+                                       //                }
+                                       //
+                                       //                // begins new line
+                                       //                ctx.beginPath();
+                                       //
+                                       //                drawing = true;
+                                       //            });
+                                       //            element.bind('mousemove', function(event){
+                                       //                if(drawing){
+                                       //                    // get current mouse position
+                                       //                    if(event.offsetX!==undefined){
+                                       //                        currentX = event.offsetX;
+                                       //                        currentY = event.offsetY;
+                                       //                    } else {
+                                       //                        currentX = event.layerX - event.currentTarget.offsetLeft;
+                                       //                        currentY = event.layerY - event.currentTarget.offsetTop;
+                                       //                    }
+                                       //
+                                       //                    draw(lastX, lastY, currentX, currentY);
+                                       //
+                                       //                    // set current coordinates to last one
+                                       //                    lastX = currentX;
+                                       //                    lastY = currentY;
+                                       //                }
+                                       //
+                                       //            });
+                                       //            element.bind('mouseup', function(event){
+                                       //                // stop drawing
+                                       //                drawing = false;
+                                       //            });
+                                       //
+                                       //            // canvas reset
+                                       //            function reset(){
+                                       //                element[0].width = element[0].width;
+                                       //            }
+                                       //
+                                       //            function draw(lX, lY, cX, cY){
+                                       //                // line from
+                                       //                ctx.moveTo(lX,lY);
+                                       //                // to
+                                       //                ctx.lineTo(cX,cY);
+                                       //                // color
+                                       //                ctx.strokeStyle = "#4bf";
+                                       //                // draw it
+                                       //                ctx.stroke();
+                                       //            }
+    }
+  };
+});'use strict';
 //Menu service used for managing  menus
 angular.module('core').service('Menus', [function () {
     // Define a set of default roles
-    this.defaultRoles = ['user'];
+    this.defaultRoles = ['*'];
     // Define the menus object
     this.menus = {};
     // A private function for rendering decision 
     var shouldRender = function (user) {
       if (user) {
-        for (var userRoleIndex in user.roles) {
-          for (var roleIndex in this.roles) {
-            if (this.roles[roleIndex] === user.roles[userRoleIndex]) {
-              return true;
+        if (!!~this.roles.indexOf('*')) {
+          return true;
+        } else {
+          for (var userRoleIndex in user.roles) {
+            for (var roleIndex in this.roles) {
+              if (this.roles[roleIndex] === user.roles[userRoleIndex]) {
+                return true;
+              }
             }
           }
         }
@@ -245,7 +272,7 @@ angular.module('core').service('Menus', [function () {
         menuItemClass: menuItemType,
         uiRoute: menuItemUIRoute || '/' + menuItemURL,
         isPublic: isPublic === null || typeof isPublic === 'undefined' ? this.menus[menuId].isPublic : isPublic,
-        roles: roles || this.defaultRoles,
+        roles: roles === null || typeof roles === 'undefined' ? this.menus[menuId].roles : roles,
         position: position || 0,
         items: [],
         shouldRender: shouldRender
@@ -266,7 +293,7 @@ angular.module('core').service('Menus', [function () {
             link: menuItemURL,
             uiRoute: menuItemUIRoute || '/' + menuItemURL,
             isPublic: isPublic === null || typeof isPublic === 'undefined' ? this.menus[menuId].items[itemIndex].isPublic : isPublic,
-            roles: roles || this.defaultRoles,
+            roles: roles === null || typeof roles === 'undefined' ? this.menus[menuId].items[itemIndex].roles : roles,
             position: position || 0,
             shouldRender: shouldRender
           });
@@ -306,6 +333,228 @@ angular.module('core').service('Menus', [function () {
     //Adding the topbar menu
     this.addMenu('topbar');
   }]);'use strict';
+// Configuring the Articles module
+angular.module('programs').run([
+  'Menus',
+  function (Menus) {
+    // Set top bar menu items
+    Menus.addMenuItem('topbar', 'Programs', 'programs', 'dropdown', '/course(/create)?');
+    Menus.addSubMenuItem('topbar', 'programs', 'List Programs', 'programs');
+    Menus.addSubMenuItem('topbar', 'programs', 'New Program', 'course/create');
+  }
+]);'use strict';
+//Setting up route
+angular.module('programs').config([
+  '$stateProvider',
+  function ($stateProvider) {
+    // Programs state routing
+    $stateProvider.state('viewCourse', {
+      url: '/program',
+      templateUrl: 'modules/course/views/course.client.view.html'
+    }).state('viewDeets', {
+      url: '/deets',
+      templateUrl: 'modules/course/views/deets.client.view.html'
+    });
+  }
+]);'use strict';
+// Programs controller
+angular.module('programs').controller('ProgramsController', [
+  '$scope',
+  '$stateParams',
+  '$location',
+  'Authentication',
+  'Programs',
+  function ($scope, $stateParams, $location, Authentication, Programs) {
+    $scope.authentication = Authentication;
+    $scope.setFull;
+  }
+]);'use strict';
+// Configuring the Articles module
+angular.module('submissions').run([
+  'Menus',
+  function (Menus) {
+    // Set top bar menu items
+    Menus.addMenuItem('topbar', 'Submissions', 'submissions', 'dropdown', '/submissions(/create)?');
+    Menus.addSubMenuItem('topbar', 'submissions', 'List Submissions', 'submissions');
+    Menus.addSubMenuItem('topbar', 'submissions', 'New Submission', 'submissions/create');
+  }
+]);'use strict';
+//Setting up route
+angular.module('submissions').config([
+  '$stateProvider',
+  function ($stateProvider) {
+    // Submissions state routing
+    $stateProvider.state('listSubmissions', {
+      url: '/submissions',
+      templateUrl: 'modules/submissions/views/list-submissions.client.view.html'
+    }).state('createSubmission', {
+      url: '/submissions/create',
+      templateUrl: 'modules/submissions/views/create-submission.client.view.html'
+    }).state('viewSubmission', {
+      url: '/submissions/:submissionId',
+      templateUrl: 'modules/submissions/views/view-submission.client.view.html'
+    }).state('editSubmission', {
+      url: '/submissions/:submissionId/edit',
+      templateUrl: 'modules/submissions/views/edit-submission.client.view.html'
+    });
+  }
+]);'use strict';
+// Submissions controller
+angular.module('submissions').controller('SubmissionsController', [
+  '$scope',
+  '$stateParams',
+  '$location',
+  'Authentication',
+  'Submissions',
+  function ($scope, $stateParams, $location, Authentication, Submissions) {
+    $scope.authentication = Authentication;
+    // Create new Submission
+    $scope.create = function () {
+      // Create new Submission object
+      var submission = new Submissions({ name: this.name });
+      // Redirect after save
+      submission.$save(function (response) {
+        $location.path('submissions/' + response._id);
+      }, function (errorResponse) {
+        $scope.error = errorResponse.data.message;
+      });
+      // Clear form fields
+      this.name = '';
+    };
+    // Remove existing Submission
+    $scope.remove = function (submission) {
+      if (submission) {
+        submission.$remove();
+        for (var i in $scope.submissions) {
+          if ($scope.submissions[i] === submission) {
+            $scope.submissions.splice(i, 1);
+          }
+        }
+      } else {
+        $scope.submission.$remove(function () {
+          $location.path('submissions');
+        });
+      }
+    };
+    // Update existing Submission
+    $scope.update = function () {
+      var submission = $scope.submission;
+      submission.$update(function () {
+        $location.path('submissions/' + submission._id);
+      }, function (errorResponse) {
+        $scope.error = errorResponse.data.message;
+      });
+    };
+    // Find a list of Submissions
+    $scope.find = function () {
+      $scope.submissions = Submissions.query();
+    };
+    // Find existing Submission
+    $scope.findOne = function () {
+      $scope.submission = Submissions.get({ submissionId: $stateParams.submissionId });
+    };
+  }
+]);'use strict';
+//Submissions service used to communicate Submissions REST endpoints
+angular.module('submissions').factory('Submissions', [
+  '$resource',
+  function ($resource) {
+    return $resource('submissions/:submissionId', { submissionId: '@_id' }, { update: { method: 'PUT' } });
+  }
+]);'use strict';
+// Configuring the Articles module
+angular.module('subscribers').run([
+  'Menus',
+  function (Menus) {
+    // Set top bar menu items
+    Menus.addMenuItem('topbar', 'Subscribers', 'subscribers', 'dropdown', '/subscribers(/create)?');
+    Menus.addSubMenuItem('topbar', 'subscribers', 'List Subscribers', 'subscribers');
+    Menus.addSubMenuItem('topbar', 'subscribers', 'New Subscriber', 'subscribers/create');
+  }
+]);'use strict';
+//Setting up route
+angular.module('subscribers').config([
+  '$stateProvider',
+  function ($stateProvider) {
+    // Subscribers state routing
+    $stateProvider.state('listSubscribers', {
+      url: '/subscribers',
+      templateUrl: 'modules/subscribers/views/list-subscribers.client.view.html'
+    }).state('createSubscriber', {
+      url: '/subscribers/create',
+      templateUrl: 'modules/subscribers/views/create-subscriber.client.view.html'
+    }).state('viewSubscriber', {
+      url: '/subscribers/:subscriberId',
+      templateUrl: 'modules/subscribers/views/view-subscriber.client.view.html'
+    }).state('editSubscriber', {
+      url: '/subscribers/:subscriberId/edit',
+      templateUrl: 'modules/subscribers/views/edit-subscriber.client.view.html'
+    });
+  }
+]);'use strict';
+// Subscribers controller
+angular.module('subscribers').controller('SubscribersController', [
+  '$scope',
+  '$stateParams',
+  '$location',
+  'Authentication',
+  'Subscribers',
+  function ($scope, $stateParams, $location, Authentication, Subscribers) {
+    $scope.authentication = Authentication;
+    // Create new Subscriber
+    $scope.create = function () {
+      // Create new Subscriber object
+      var subscriber = new Subscribers({ name: this.name });
+      // Redirect after save
+      subscriber.$save(function (response) {
+        $location.path('subscribers/' + response._id);
+      }, function (errorResponse) {
+        $scope.error = errorResponse.data.message;
+      });
+      // Clear form fields
+      this.name = '';
+    };
+    // Remove existing Subscriber
+    $scope.remove = function (subscriber) {
+      if (subscriber) {
+        subscriber.$remove();
+        for (var i in $scope.subscribers) {
+          if ($scope.subscribers[i] === subscriber) {
+            $scope.subscribers.splice(i, 1);
+          }
+        }
+      } else {
+        $scope.subscriber.$remove(function () {
+          $location.path('subscribers');
+        });
+      }
+    };
+    // Update existing Subscriber
+    $scope.update = function () {
+      var subscriber = $scope.subscriber;
+      subscriber.$update(function () {
+        $location.path('subscribers/' + subscriber._id);
+      }, function (errorResponse) {
+        $scope.error = errorResponse.data.message;
+      });
+    };
+    // Find a list of Subscribers
+    $scope.find = function () {
+      $scope.subscribers = Subscribers.query();
+    };
+    // Find existing Subscriber
+    $scope.findOne = function () {
+      $scope.subscriber = Subscribers.get({ subscriberId: $stateParams.subscriberId });
+    };
+  }
+]);'use strict';
+//Subscribers service used to communicate Subscribers REST endpoints
+angular.module('subscribers').factory('Subscribers', [
+  '$resource',
+  function ($resource) {
+    return $resource('subscribers/:subscriberId', { subscriberId: '@_id' }, { update: { method: 'PUT' } });
+  }
+]);'use strict';
 // Config HTTP Error Handling
 angular.module('users').config([
   '$httpProvider',
