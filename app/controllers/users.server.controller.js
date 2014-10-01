@@ -44,6 +44,7 @@ var getErrorMessage = function(err) {
 module.exports.list = function(req, res) {
 
 
+
     User.find().sort('-created').exec(function(err, submissions) {
         if (err) {
             return res.send(400, {
