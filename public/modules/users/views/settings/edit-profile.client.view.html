@@ -19,6 +19,29 @@
 					<label for="username">Username</label>
 					<input type="text" id="username" name="username" class="form-control" data-ng-model="user.username" placeholder="Username">
 				</div>
+                <div class="form-group">
+                    <label class="control-label">Radios</label>
+                    <div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="instructorRadio" value="instructor" checked="">
+                                Instructor
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="adminRadio" value="admin">
+                                Admin
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="userRadio" value="user">
+                                User
+                            </label>
+                        </div>
+                    </div>
+                </div>
 				<div class="text-center form-group">
 					<button type="submit" class="btn btn-large btn-primary">Save Profile</button>
 				</div>
