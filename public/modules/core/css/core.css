@@ -1,11 +1,42 @@
+
 body {
-  background-color: #343434;
+  background: url(../img/background.png) no-repeat center center fixed;
+  background-size: cover;
+
+  
 }
 
+img {
+  z-index: -5;
+}
+
+.logo {
+  width: 500px;
+  float: left;
+  position: fixed;
+  bottom: 30px;
+
+}
+
+/*.slogan {
+  font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+  float: left;
+  position: fixed;
+  bottom: 10px;
+  left: 90px;
+  bottom: 10px;
+}*/
+
+.opaque {
+  width: 100%;
+
+}
 
 .hexagons {
-  position: relative;
-  margin-left: 70%;
+  position: absolute;
+  z-index: -4;
+  float: right;
+  right: 60px;
 
 }
 
@@ -17,6 +48,7 @@ body {
   margin: 100px -20px;
   border-left: solid 5px #98ca54;
   border-right: solid 5px #98ca54;
+  z-index: -3;
 
 }
 
@@ -24,7 +56,6 @@ body {
 .hexagon:after {
   content: "";
   position: absolute;
-  z-index: 1;
   width: 141.42px;
   height: 141.42px;
   -webkit-transform: scaleY(0.5774) rotate(-45deg);
@@ -32,12 +63,17 @@ body {
   transform: scaleY(0.5774) rotate(-45deg);
   background-color: inherit;
   left: 24.2893px;
+  padding-top: 10px;
+  z-index: -2;
+  
 }
 
 .hexagon:before {
   top: -70.7107px;
   border-top: solid 7.0711px #98ca54;
   border-right: solid 7.0711px #98ca54;
+
+
 }
 
 .hexagon:after {
@@ -92,6 +128,7 @@ body {
 
 
 
+
 .darker {
   background-color: #898a8d;
 }
@@ -101,5 +138,58 @@ body {
 }
 
 
+.glyphicon-search {
+  font-size: 30px;
+  color: #98ca54;
+  margin: 45px -15px;
+}
 
+.glyphicon-heart {
+  font-size: 30px;
+  color: #98ca54;
+  -moz-transform:rotate(145deg);
+  -webkit-transform:rotate(145deg);
+  margin: 45px -15px;
+}
+
+.right {
+  z-index: 4;
+  text-align: right;
+  margin-right: 10px;
+  line-height: 15px;
+}
+
+
+
+.bottom {
+  text-align: right;
+  margin-right: 15px;
+  color: #98ca54;
+  font-size: 25px;
+  text-shadow: 1px 1px 1px #404040;
+
+}
+
+.top {
+  text-align: left;
+  margin-left: 15px;
+  margin-top: -120px;
+  color: #98ca54;
+  font-size: 25px;
+  text-shadow: 1px 1px 1px #404040;
+
+}
+
+
+.left {
+  z-index: 4;
+  text-align: left;
+  margin-left: 10px;
+  line-height: 15px;
+  padding-top: 70px;
+}
+
+p h6 {
+   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
 
