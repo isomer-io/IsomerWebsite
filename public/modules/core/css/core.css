@@ -312,3 +312,112 @@ p {
 
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (min-width: 1700px) {
+  
+
+.hexagon {
+  width: 400px; 
+  height: 230.94px;
+  margin: 115.47px 0;
+  right: 60px;
+}
+
+.hexagon:before,
+.hexagon:after {
+  width: 282.84px;
+  height: 282.84px;
+  left: 53.5786px;
+  padding-top: 70px;
+}
+
+.hexagon:before {
+  top: -141.4214px;
+}
+
+.hexagon:after {
+  bottom: -141.4214px;
+}
+
+
+.arrow-up {
+  border-left: 80px solid transparent;
+  border-right: 80px solid transparent;
+  border-bottom: 140px solid black;
+  position: absolute;
+  -moz-transform:rotate(30deg);
+  -webkit-transform:rotate(30deg);
+  margin: 75px 32px;
+}
+
+
+
+.arrow-down {
+  border-left: 80px solid transparent;
+  border-right: 80px solid transparent;
+  border-bottom: 140px solid black;
+  margin: -40px 100px;
+}
+
+.glyphicon-search {
+  font-size: 60px;
+  margin: 65px -30px;
+}
+
+.glyphicon-heart {
+  font-size: 60px;
+  margin: 55px -30px;
+}
+
+.right {
+  margin-right: 10px;
+  line-height: 20px;
+  padding-top: 10px;
+}
+
+
+.bottom {
+  margin-right: 15px;
+  font-size: 40px;
+  margin-top: 25px;
+}
+
+.top {
+  margin-left: 15px;
+  margin-top: -155px;
+  font-size: 40px;
+
+}
+
+
+.left {
+  margin-left: 10px;
+  line-height: 20px;
+  padding-top: 110px;
+}
+
+p {
+  font-size: 15px;
+}
+
+}
+
+
