@@ -1,16 +1,15 @@
-@import url(http://fonts.googleapis.com/css?family=Raleway:400,300,200,100);
+@import url(http://fonts.googleapis.com/css?family=Lato|Quicksand:300,400,700|Raleway:400,100,200,300,500,600,700,800,900);
 
 body {
   background-color: #343434;
   background: url(../img/background.png) no-repeat center center fixed;
   background-size: cover;
+  font-family: 'Quicksand', sans-serif;
 
   
 }
 
-img {
-  z-index: -5;
-}
+/*Positions Logo in bottom left hand corner*/
 
 .logo {
   width: 625px;
@@ -21,10 +20,9 @@ img {
 
 }
 
+/*Positions slogan below the logo*/
 
-
-h4 {
-  font-family: "Lucida Sans ", "Lucida Grande", sans-serif;
+.slogan {
   font-size: 2.1em;
   color: #666;
   float: left;
@@ -33,27 +31,15 @@ h4 {
   bottom: 5%;
 }
 
-/* Media Query To Make Logo and Slogan Smaller for Tablet*/
 
 
-@media all and (max-width: 997px) {
-  .logo {
-    width: 460px;
-  }
-
-  h4 {
-    font-size: 1.5em;
-    margin-left: 2.3em;
-  }
-
-}
-
-
-.opaque {
+/*.opaque {
   width: 100%;
 
-}
+}*/
 
+
+/*Allows the hexagons to scroll and positions them right*/
 .hexagons {
   position: absolute;
   z-index: -4;
@@ -62,6 +48,7 @@ h4 {
 
 }
 
+/**/
 .hexagon {
   position: relative;
   width: 200px; 
@@ -74,6 +61,8 @@ h4 {
 
 }
 
+
+/**/
 .hexagon:before,
 .hexagon:after {
   content: "";
@@ -89,29 +78,36 @@ h4 {
   
 }
 
+
+/**/
 .hexagon:before {
   top: -70.7107px;
   border-top: solid 7.0711px #98ca54;
   border-right: solid 7.0711px #98ca54;
 
-
 }
 
+
+/**/
 .hexagon:after {
   bottom: -70.7107px;
   border-bottom: solid 7.0711px #98ca54;
   border-left: solid 7.0711px #98ca54;
 }
 
-
+/**/
 .hexagon:nth-child(even) {
     margin-left: 100px;
 }
 
+
+/**/
 .hexagon {
     clear: left;
 }
 
+
+/**/
 .arrow-up {
   width: 0; 
   height: 0; 
@@ -127,6 +123,8 @@ h4 {
 }
 
 
+
+/**/
 .arrow-down {
   width: 0; 
   height: 0; 
@@ -142,21 +140,29 @@ h4 {
 }
 
 
+
+/**/
 .darker {
   background-color: #898a8d;
 }
 
+
+/**/
 .darkest {
   background-color: #4f5052;
 }
 
 
+
+/**/
 .glyphicon-search {
   font-size: 30px;
   color: #98ca54;
   margin: 45px -15px;
 }
 
+
+/**/
 .glyphicon-heart {
   font-size: 30px;
   color: #98ca54;
@@ -165,6 +171,8 @@ h4 {
   margin: 45px -15px;
 }
 
+
+/**/
 .right {
   z-index: 4;
   text-align: right;
@@ -173,7 +181,7 @@ h4 {
 }
 
 
-
+/**/
 .bottom {
   text-align: right;
   margin-right: 15px;
@@ -183,6 +191,8 @@ h4 {
 
 }
 
+
+/**/
 .top {
   text-align: left;
   margin-left: 15px;
@@ -194,6 +204,7 @@ h4 {
 }
 
 
+/**/
 .left {
   z-index: 4;
   text-align: left;
@@ -202,11 +213,8 @@ h4 {
   padding-top: 70px;
 }
 
-p h6 {
-   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-}
 
-
+/**/
 @media (max-width: 997) {
   .logo{
     width: 40%;
@@ -217,9 +225,8 @@ p h6 {
 
 
 
-
-@media (min-width: 1100px) {
-  
+/**/
+@media (min-width: 1100px) { 
 
 .hexagon {
   width: 300px; 
@@ -316,22 +323,7 @@ p {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/**/
 @media (min-width: 1700px) {
   
 
@@ -420,5 +412,114 @@ p {
 }
 
 }
+
+
+
+/* Media Query To Make Logo and Slogan Smaller for Tablet*/
+
+
+@media all and (max-width: 997px) {
+  .logo {
+    width: 460px;
+  }
+
+  .slogan {
+    font-size: 1.5em;
+    margin-left: 2.3em;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+/*Sidebar*/
+
+  #sidebar-wrapper {
+    margin-right: -250px;
+    right: 0;
+    width: 250px;
+    background: rgb(0,0,0);
+    position: fixed;
+    height: 100%;
+    overflow-y: auto;
+    z-index: 1000;
+    transition: all 0.5s ease-in 0s;
+    -webkit-transition: all 0.5s ease-in 0s;
+    -moz-transition: all 0.5s ease-in 0s;
+    -ms-transition: all 0.5s ease-in 0s;
+    -o-transition: all 0.5s ease-in 0s;
+  }
+
+  .sidebar-nav {
+    position: absolute;
+    top: 0;
+    width: 250px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .sidebar-nav li {
+    line-height: 50px;
+    text-indent: 20px;
+  }
+
+  .sidebar-nav li a {
+    color: #999999;
+    display: block;
+    text-decoration: none;
+  }
+
+  .sidebar-nav li a:hover {
+    color: #fff;
+    background: rgba(255,255,255,0.2);
+    text-decoration: none;
+  }
+
+  .sidebar-nav li a:active, .sidebar-nav li a:focus {
+    text-decoration: none;
+  }
+
+  .sidebar-nav > .sidebar-brand {
+    height: 55px;
+    line-height: 55px;
+    font-size: 18px;
+  }
+
+  .sidebar-nav > .sidebar-brand a {
+    color: #999999;
+  }
+
+  .sidebar-nav > .sidebar-brand a:hover {
+    color: #fff;
+    background: none;
+  }
+
+  #menu-toggle {
+    top: 0;
+    right: 0;
+    position: fixed;
+    z-index: 1;
+  }
+
+  #sidebar-wrapper.active {
+    right: 250px;
+    width: 250px;
+    transition: all 0.5s ease-out 0s;
+    -webkit-transition: all 0.5s ease-out 0s;
+    -moz-transition: all 0.5s ease-out 0s;
+    -ms-transition: all 0.5s ease-out 0s;
+    -o-transition: all 0.5s ease-out 0s;
+  }
+
+  .toggle {
+    margin: 5px 5px 0 0;
+  }
 
 
