@@ -12,13 +12,13 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 			url: '/',
 			templateUrl: 'modules/core/views/home.client.view.html'
 		}).
-        state('tree', {
-                url: '/tree',
-                templateUrl: 'modules/core/views/tree.client.view.html'
-            }).
-        state('planets', {
-                url: '/planets',
-                templateUrl: 'modules/core/views/planets.client.view.html'
+        state('asynchronous', {
+                url: '/asynchronous',
+                templateUrl: 'modules/core/views/asynchronous.client.view.html'
+            });
+        state('community', {
+                url: '/community',
+                templateUrl: 'modules/core/views/community.client.view.html'
             });
 	}
 ]);
