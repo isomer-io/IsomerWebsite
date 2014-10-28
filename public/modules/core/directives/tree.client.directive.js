@@ -2,7 +2,7 @@
 
 angular.module('core').directive('tree', function(){
     return {
-        restrict: "A",
+        restrict: 'A',
         link: function(scope, element){
             var ctx = element[0].getContext('2d');
 
