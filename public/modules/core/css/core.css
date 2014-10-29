@@ -196,6 +196,7 @@ i {
     border-top: solid 5px #98ca54;
 }
 
+.banner {}
 
 .one {
   margin-top: 30px;
@@ -257,25 +258,25 @@ h2 {
 
 /*Positions Logo in bottom left hand corner*/
 
-/*.logo {
+.logo {
   width: 625px;
   float: left;
   margin-left: -5%;
   position: fixed;
   bottom: 10%;
 
-}*/
+}
 
-/*Positions slogan below the logo*/
 
-/*.slogan {
+
+.slogan {
   font-size: 2.1em;
   color: #666;
   float: left;
   margin-left: 5%;
   position: fixed;
   bottom: 5%;
-}*/
+}
 
 
 

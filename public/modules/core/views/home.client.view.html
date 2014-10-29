@@ -1,20 +1,21 @@
 <body>
 
-<section data-ng-controller="HomeController" class="home-page">
+<section data-ng-controller="HeaderController" class="home-page">
     
 <div id="hexagonnav">
-    <div id="hexoutside" class="hexagon-wrapper">
-        <div id="coloroutside" class="hexagon">
+    <div class="sidehex" ng-click="toggle()">
+        <div id="hexoutside" class="hexagon-wrapper">
+            <div id="coloroutside" class="hexagon">
 
-            <div id="hexinside" class="hexagon-wrapper">
-                <div id="colorinside" class="hexagoninside">
-                    <i class="fa fa-angellist"></i>
+                <div id="hexinside" class="hexagon-wrapper">
+                    <div id="colorinside" class="hexagoninside">
+                        <i class="fa fa-angellist"></i>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <div>   
+    </div>    
+    <div class ="banner" ng-show="myVar">   
         <div class="rectangle one">
             <h2>Isomer Academy</h2>
         </div>
@@ -31,18 +32,21 @@
 
 
 <div id="hexagonnav">
-    <div id="hexoutsidetwo" class="hexagon-wrapper outtwo">
-        <div id="coloroutside" class="hexagon">
+    <div class="sidehex" ng-click="toggle1()">
+        <div id="hexoutsidetwo" class="hexagon-wrapper outtwo">
+            <div id="coloroutside" class="hexagon">
 
-            <div id="hexinside" class="hexagon-wrapper intwo">
-                <div id="colorinside" class="hexagoninside">
-                    <i class="fa fa-angellist"></i>
+                <div id="hexinside" class="hexagon-wrapper intwo">
+                    <div id="colorinside" class="hexagoninside">
+                        <i class="fa fa-angellist"></i>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div>    
 
-    <div>    
+    <div> 
+    <div class ="banner" ng-show="myVar1">    
         <div class="rectangle two">
             <h2>Asynchronous Learning Model</h2>
         </div>
@@ -58,18 +62,20 @@
 
 
 <div id="hexagonnav">
-    <div id="hexoutsidethree" class="hexagon-wrapper outtwo">
-        <div id="coloroutside" class="hexagon">
+    <div class="sidehex" ng-click="toggle2()">
+        <div id="hexoutsidethree" class="hexagon-wrapper outtwo">
+            <div id="coloroutside" class="hexagon">
 
-            <div id="hexinside" class="hexagon-wrapper intwo">
-                <div id="colorinside" class="hexagoninside">
-                    <i class="fa fa-angellist"></i>
+                <div id="hexinside" class="hexagon-wrapper intwo">
+                    <div id="colorinside" class="hexagoninside">
+                        <i class="fa fa-angellist"></i>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div>    
 
-    <div>    
+    <div class ="banner" ng-show="myVar2">     
         <div class="rectangle three">
             <h2>Build Real-world Applications</h2>
         </div>
@@ -88,18 +94,20 @@
 
 
 <div id="hexagonnav">
-    <div id="hexoutsidefour" class="hexagon-wrapper outtwo">
-        <div id="coloroutside" class="hexagon">
+    <div class="sidehex" ng-click="toggle3()">
+        <div id="hexoutsidefour" class="hexagon-wrapper outtwo">
+            <div id="coloroutside" class="hexagon">
 
-            <div id="hexinside" class="hexagon-wrapper intwo">
-                <div id="colorinside" class="hexagoninside">
-                    <i class="fa fa-angellist"></i>
+                <div id="hexinside" class="hexagon-wrapper intwo">
+                    <div id="colorinside" class="hexagoninside">
+                        <i class="fa fa-angellist"></i>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
+    </div>    
 
-    <div>   
+    <div class ="banner" ng-show="myVar3">    
         <div class="rectangle four">
             <h2>Community</h2>
         </div>
@@ -116,18 +124,20 @@
 
 
 <div id="hexagonnav">
-    <div id="hexoutsidefive" class="hexagon-wrapper outtwo">
-        <div id="coloroutside" class="hexagon">
+    <div class="sidehex" ng-click="toggle4()">
+        <div id="hexoutsidefive" class="hexagon-wrapper outtwo">
+            <div id="coloroutside" class="hexagon">
 
-            <div id="hexinside" class="hexagon-wrapper intwo">
-                <div id="colorinside" class="hexagoninside">
-                    <i class="fa fa-angellist"></i>
+                <div id="hexinside" class="hexagon-wrapper intwo">
+                    <div id="colorinside" class="hexagoninside">
+                        <i class="fa fa-angellist"></i>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <div>    
+    </div>    
+</div>
+    <div class ="banner" ng-show="myVar4">   
         <div class="rectangle five">
             <h2>Students & Instructors</h2>
         </div>
@@ -144,18 +154,19 @@
 
 
 <div id="hexagonnav">
-    <div id="hexoutsidesix" class="hexagon-wrapper outtwo">
-        <div id="coloroutside" class="hexagon">
+    <div class="sidehex" ng-click="toggle5()">
+        <div id="hexoutsidesix" class="hexagon-wrapper outtwo">
+            <div id="coloroutside" class="hexagon">
 
-            <div id="hexinside" class="hexagon-wrapper intwo">
-                <div id="colorinside" class="hexagoninside">
-                    <i class="fa fa-angellist"></i>
+                <div id="hexinside" class="hexagon-wrapper intwo">
+                    <div id="colorinside" class="hexagoninside">
+                        <i class="fa fa-angellist"></i>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <div>    
+    </div>    
+    <div class ="banner" ng-show="myVar5">    
         <div class="rectangle six">
             <h2>Logistics & Pricing</h2>
         </div>
@@ -171,18 +182,19 @@
 
 
 <div id="hexagonnav">
-    <div id="hexoutsideseven" class="hexagon-wrapper outtwo">
-        <div id="coloroutside" class="hexagon">
+    <div class="sidehex" ng-click="toggle6()">
+        <div id="hexoutsideseven" class="hexagon-wrapper outtwo">
+            <div id="coloroutside" class="hexagon">
 
-            <div id="hexinside" class="hexagon-wrapper intwo">
-                <div id="colorinside" class="hexagoninside">
-                    <i class="fa fa-angellist"></i>
+                <div id="hexinside" class="hexagon-wrapper intwo">
+                    <div id="colorinside" class="hexagoninside">
+                        <i class="fa fa-angellist"></i>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <div>   
+    </div>    
+    <div class ="banner" ng-show="myVar6">  
         <div class="rectangle seven">
             <h2>Full Stack Javascript</h2>
         </div>
