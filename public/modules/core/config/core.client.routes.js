@@ -14,11 +14,11 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 		}).
         state('tree', {
                 url: '/tree',
-                templateUrl: 'modules/core/views/tree.client.view.html'
+                templateUrl: 'modules/core/views/asynchronous.client.view.html'
             }).
-        state('planets', {
-                url: '/planets',
-                templateUrl: 'modules/core/views/planets.client.view.html'
+        state('asynchronous', {
+                url: '/asynchronous',
+                templateUrl: 'modules/core/views/community.client.view.html'
             });
 	}
 ]);
