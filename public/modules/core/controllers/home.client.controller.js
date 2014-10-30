@@ -8,7 +8,7 @@ angular.module('core').controller('HomeController', ['$scope', 'Authentication',
 
         $scope.open = function() {
             $scope.title ='Open';
-            $scope.subtitle = 'Our curriculum is free and open source. We use agile development on all projects.'
+            $scope.subtitle = 'Our curriculum is free and open source. We use agile development on all projects.';
         };
 
         $scope.isomer = function() {

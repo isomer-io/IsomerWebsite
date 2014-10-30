@@ -1,16 +1,262 @@
-@import url(http://fonts.googleapis.com/css?family=Raleway:400,300,200,100);
+@import url(http://fonts.googleapis.com/css?family=Lato|Quicksand:300,400,700|Raleway:400,100,200,300,500,600,700,800,900);
 
 body {
   background-color: #343434;
   background: url(../img/background.png) no-repeat center center fixed;
   background-size: cover;
+  font-family: 'Quicksand', sans-serif;
 
   
 }
 
-img {
-  z-index: -5;
+#hexagonnav {
+  width: 100%;
 }
+
+#hexoutside {
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  top: 10px;
+  left: -65px;
+}
+
+#hexinside {
+  width: 130px;
+  height: 130px;
+  margin-left: -19px;
+  margin-top: 10px;
+  z-index: -1;
+}
+
+#hexoutsidetwo {
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  top: 200px;
+  left: -65px;
+}
+
+#hexoutsidethree {
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  top: 390px;
+  left: -65px;
+}
+
+
+#hexoutsidefour {
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  top: 580px;
+  left: -65px;
+}
+
+#hexoutsidefive {
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  top: 770px;
+  left: -65px;
+}
+
+#hexoutsidesix {
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  top: 960px;
+  left: -65px;
+}
+
+#hexoutsideseven {
+  width: 160px;
+  height: 160px;
+  position: absolute;
+  top: 1150px;
+  left: -65px;
+}
+
+i {
+  color: #98ca54;
+}
+
+.fa {
+  position: absolute;
+  top: 33px;
+  left: 50px;
+  font-size: 60px;
+  z-index: 0;
+}
+
+#coloroutside {
+  background-color: transparent;
+}
+
+#colorinside {
+  background-color: grey;
+}
+
+.hexagon-wrapper {
+  text-align: center;
+  margin: 20px;
+  position: absolute;
+  display: block;
+}
+
+
+.hexagon {
+  height: 100%;
+  width: calc(100% * 0.57735);
+  display: inline-block;
+  border-bottom: solid 5px #98ca54;
+  border-top: solid 5px #98ca54;
+  z-index: -1;
+}
+
+.hexagoninside {
+  height: 100%;
+  width: calc(100% * 0.57735);
+  display: inline-block;
+  z-index: -1;
+}
+
+.hexagon:before {
+  position: absolute;
+  top: 0;
+  right: calc((100% / 2) - ((100% * 0.57735) / 2));
+  background-color: inherit;
+  height: inherit;
+  width: inherit;
+  content: '';
+  transform: rotateZ(60deg);
+  border-top: solid 5px #98ca54;
+  border-bottom: solid 5px #98ca54;
+  z-index: -1;
+}
+
+.hexagoninside:before {
+  position: absolute;
+  top: 0;
+  right: calc((100% / 2) - ((100% * 0.57735) / 2));
+  background-color: inherit;
+  height: inherit;
+  width: inherit;
+  content: '';
+  transform: rotateZ(60deg);
+  z-index: -1;
+}
+
+.hexagon:after {
+  position: absolute;
+  top: 0;
+  right: calc((100% / 2) - ((100% * 0.57735) / 2));
+  background-color: inherit;
+  height: inherit;
+  width: inherit;
+  content: '';
+  transform: rotateZ(-60deg);
+  border-bottom: solid 5px #98ca54;
+  border-top: solid 5px #98ca54;
+  z-index: -1;
+}
+
+.hexagoninside:after {
+  position: absolute;
+  top: 0;
+  right: calc((100% / 2) - ((100% * 0.57735) / 2));
+  background-color: inherit;
+  height: inherit;
+  width: inherit;
+  content: '';
+  transform: rotateZ(-60deg);
+  z-index: -1;
+}
+
+
+.big-triangle {
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 80px 0 80px 40px;
+    border-color: transparent transparent transparent #343434;
+    position:absolute;
+    left: 180px;
+
+}
+
+.rectangle {
+    background-color:grey;
+    width: 100%;
+    height: 160px;
+    left: 180px;
+    position:absolute;
+    border-bottom: solid 5px #98ca54;
+    border-top: solid 5px #98ca54;
+}
+
+.banner {}
+
+.one {
+  margin-top: 30px;
+  margin-left: -50px;
+}
+
+.two {
+  margin-top: 220px;
+  margin-left: -50px;
+}
+
+.three {
+  margin-top: 410px;
+  margin-left: -50px;
+}
+
+
+.four {
+  margin-top: 600px;
+  margin-left: -50px;
+}
+
+.five {
+  margin-top: 790px;
+  margin-left: -50px;
+}
+
+.six {
+  margin-top: 980px;
+  margin-left: -50px;
+}
+
+.seven {
+  margin-top: 1170px;
+  margin-left: -50px;
+}
+
+
+h2 {
+  font-family: Lato;
+  font-size: 4vw;
+  margin-left: 90px;
+  text-align: left;
+  position: relative;
+  top: 35%;
+  transform: translateY(-50%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*Positions Logo in bottom left hand corner*/
 
 .logo {
   width: 40%;
@@ -23,9 +269,14 @@ img {
 
 
 
+<<<<<<< HEAD
 h4 {
   font-family: "Lucida Sans ", "Lucida Grande", sans-serif;
   font-size: 2.1vw;
+=======
+.slogan {
+  font-size: 2.1em;
+>>>>>>> adb3e16b371f442eb880676cda325d60ed08027f
   color: #666;
   float: left;
   margin-left: 6%;
@@ -35,20 +286,27 @@ h4 {
 
 
 
+<<<<<<< HEAD
 .opaque {
+=======
+/*.opaque {
+>>>>>>> adb3e16b371f442eb880676cda325d60ed08027f
   width: 100%;
 
-}
+}*/
 
-.hexagons {
+
+/*Allows the hexagons to scroll and positions them right*/
+/*.hexagons {
   position: absolute;
   z-index: -4;
   float: right;
   right: 60px;
 
-}
+}*/
 
-.hexagon {
+/**/
+/*.hexagon {
   position: relative;
   width: 200px; 
   height: 115.47px;
@@ -59,8 +317,10 @@ h4 {
   z-index: -3;
 
 }
+*/
 
-.hexagon:before,
+/**/
+/*.hexagon:before,
 .hexagon:after {
   content: "";
   position: absolute;
@@ -73,32 +333,39 @@ h4 {
   left: 24.2893px;
   z-index: -2;
   
-}
+}*/
 
-.hexagon:before {
+
+/**/
+/*.hexagon:before {
   top: -70.7107px;
   border-top: solid 7.0711px #98ca54;
   border-right: solid 7.0711px #98ca54;
 
+}*/
 
-}
 
-.hexagon:after {
+/**/
+/*.hexagon:after {
   bottom: -70.7107px;
   border-bottom: solid 7.0711px #98ca54;
   border-left: solid 7.0711px #98ca54;
 }
-
-
-.hexagon:nth-child(even) {
+*/
+/**/
+/*.hexagon:nth-child(even) {
     margin-left: 100px;
-}
+}*/
 
-.hexagon {
+
+/**/
+/*.hexagon {
     clear: left;
-}
+}*/
 
-.arrow-up {
+
+/**/
+/*.arrow-up {
   width: 0; 
   height: 0; 
   border-left: 50px solid transparent;
@@ -110,10 +377,12 @@ h4 {
   -moz-transform:rotate(30deg);
   -webkit-transform:rotate(30deg);
   margin: 50px 22px;
-}
+}*/
 
 
-.arrow-down {
+
+/**/
+/*.arrow-down {
   width: 0; 
   height: 0; 
   border-left: 50px solid transparent;
@@ -126,50 +395,62 @@ h4 {
   -webkit-transform:rotate(210deg);
   margin: -22px 67px;
 }
+*/
 
 
-.darker {
+/**/
+/*.darker {
   background-color: #898a8d;
-}
+}*/
 
-.darkest {
+
+/**/
+/*.darkest {
   background-color: #4f5052;
-}
+}*/
 
 
-.glyphicon-search {
+
+/**/
+/*.glyphicon-search {
   font-size: 30px;
   color: #98ca54;
   margin: 45px -15px;
-}
+}*/
 
-.glyphicon-heart {
+
+/**/
+/*.glyphicon-heart {
   font-size: 30px;
   color: #98ca54;
   -moz-transform:rotate(151deg);
   -webkit-transform:rotate(151deg);
   margin: 45px -15px;
-}
+}*/
 
-.right {
+
+/**/
+/*.right {
   z-index: 4;
   text-align: right;
   margin-right: 10px;
   line-height: 15px;
-}
+}*/
 
 
-
-.bottom {
+/**/
+/*.bottom {
   text-align: right;
   margin-right: 15px;
   color: #98ca54;
   font-size: 25px;
   text-shadow: 1px 1px 1px #404040;
 
-}
+}*/
 
-.top {
+
+/**/
+/*.top {
   text-align: left;
   margin-left: 15px;
   margin-top: -120px;
@@ -178,26 +459,34 @@ h4 {
   text-shadow: 1px 1px 1px #404040;
 
 }
+*/
 
-
-.left {
+/**/
+/*.left {
   z-index: 4;
   text-align: left;
   margin-left: 10px;
   line-height: 15px;
   padding-top: 70px;
+}*/
+
+
+<<<<<<< HEAD
+=======
+/**/
+/*@media (max-width: 997) {
+  .logo{
+    width: 40%;
+  };
+
+
 }
+*/
 
-p h6 {
-   font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
-}
+>>>>>>> adb3e16b371f442eb880676cda325d60ed08027f
 
-
-
-
-
-@media (min-width: 1100px) {
-  
+/**/
+/*@media (min-width: 1100px) { 
 
 .hexagon {
   width: 300px; 
@@ -290,8 +579,10 @@ p {
 
 }
 
+*/
 
 
+<<<<<<< HEAD
 
 
 
@@ -339,6 +630,11 @@ p {
         bottom: 7%;
     }
 
+=======
+/**/
+/*@media (min-width: 1700px) {
+  
+>>>>>>> adb3e16b371f442eb880676cda325d60ed08027f
 
 .hexagon {
   width: 400px; 
@@ -547,6 +843,68 @@ p {
     }
 
 }
+*/
+
+
+/* Media Query To Make Logo and Slogan Smaller for Tablet*/
+
+
+/*@media all and (max-width: 997px) {
+  .logo {
+    width: 460px;
+  }
+
+  .slogan {
+    font-size: 1.5em;
+    margin-left: 2.3em;
+  }
+
+}*/
+
+
+
+
+
+
+
+
+
+
+.heading {
+  text-align: center;
+  margin: 0 auto;
+  color: rgba(0,0,0,0.6);
+  text-shadow: 2px 2px 3px rgba(255,255,255,0.1);
+}
+
+.sub-heading {
+  color: #9dcb3b;
+  text-align: center;
+  margin: 2% auto;
+}
+
+.text-content {
+  font-size: 2em;
+  text-align: center;
+  width: 75%;
+  margin: 2% auto;
+  color: white;
+}
+
+.icon-heading {
+  text-align: center;
+  margin: 8% auto 0 auto;
+  font-size: 18vmin;
+  color: #9dcb3b;
+}
+
+.line-separator {
+  border-bottom: 3px solid rgba(102, 102, 102, 0.3);;
+  width: 65%;
+  margin: 2% auto 6% auto;
+}
+
+
 
 
 */
