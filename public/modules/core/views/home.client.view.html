@@ -1,5 +1,3 @@
-<body>
-
 <section data-ng-controller="HomeController" class="home-page">
 
 
@@ -11,26 +9,13 @@
      This means no -webkit-transform, -moz-transform, ... -->
 <script src="//cdn.jsdelivr.net/prefixfree/1.0.7/prefixfree.min.js"></script>
 
-    <div class="col-md-4 navbar-fixed-top">
-        <div class="left">
-        <div class="img-responsive">
-            <img class="img-responsive" src="/modules/core/img/LogoLarge.png">
-            <h4 class="slogan pull-right">cure for the common code.</h4>
-        </div>
 
-        <div class="selling-points">
-            <h3 data-ng-click="selectContent('About Isomer')">About Isomer</h3>
-            <h3 data-ng-click="selectContent('Community')">Community</h3>
-            <h3 data-ng-click="selectContent('Curriculum')">Curriculum</h3>
-            <h3 data-ng-click="selectContent('Real World Application')">Real World Application</h3>
-            <h3 data-ng-click="selectContent('Students')">Students</h3>
-        </div>
-        </div>
+    <div class="col-md-2">
+        <span></span>
     </div>
 
 
-
-    <div class="col-md-8 isomer-deets" data-ng-include="getView()">
+    <div class="col-md-10 isomer-deets" data-ng-include="getView()">
 
     </div>
 
@@ -43,7 +28,3 @@
     <!--</div>-->
 
 </section>
-
-
-
-</body>
