@@ -45,9 +45,9 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 			templateUrl: 'modules/core/views/pricing.client.view.html'
 		}).
 
-		state('realWorld', {
-			url: '/realWorld',
-			templateUrl: 'modules/core/views/real-world.client.view.html'
+		state('realworld', {
+			url: '/realworld',
+			templateUrl: 'modules/core/views/realworld.client.view.html'
 		}).
 
 		state('students', {

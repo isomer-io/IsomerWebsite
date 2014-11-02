@@ -6,7 +6,10 @@ body {
   background-size: cover;
   font-family: 'Quicksand', sans-serif;
 
-  
+}
+
+h1.head-room {
+  margin-top: 150px;
 }
 
 i {
@@ -33,7 +36,7 @@ a, a:hover, a:focus {
 }
 
 h2 {
-  font-family: Lato;
+  font-family: Lato, sans-serif;
   font-size: 4vw;
   margin-left: 90px;
   text-align: left;
@@ -94,53 +97,20 @@ h3 {
   text-align: right;
 }
 
+.img-right-pad {
+  margin: 10px 0 -5px 15px;
+}
 
+.img-left-pad {
+  margin: 10px 15px -5px 0;
+}
 
+h3.black {
+  color: rgba(0,0,0,0.6);
+  text-shadow: #666;
+  padding-top: 20px;
+}
 
-
-/**/
-/*create a hexagon*/
-/**/
-/*.hexagon {*/
-  /*width: 100px;*/
-  /*height: 55px;*/
-  /*background: #9FCE3C;*/
-  /*position: relative;*/
-  /*font-weight: bold;*/
-  /*color: white;*/
-  /*font-size: 2em;*/
-  /*line-height: 100%;*/
-/*}*/
-
-/*.hexagon:before {*/
-  /*content: "";*/
-  /*position: absolute;*/
-  /*top: -25px;*/
-  /*left: 0;*/
-  /*width: 0;*/
-  /*height: 0;*/
-  /*border-left: 50px solid transparent;*/
-  /*border-right: 50px solid transparent;*/
-  /*border-bottom: 25px solid #9FCE3C;*/
-/*}*/
-
-/*.hexagon:after {*/
-  /*content: "";*/
-  /*position: absolute;*/
-  /*bottom: -25px;*/
-  /*left: 0;*/
-  /*width: 0;*/
-  /*height: 0;*/
-  /*border-left: 50px solid transparent;*/
-  /*border-right: 50px solid transparent;*/
-  /*border-top: 25px solid #9FCE3C;*/
-/*}*/
-
-/*.hex-padding {*/
-  /*margin-left: 50%;*/
-  /*margin-top: 40px;*/
-  /*margin-bottom: 40px;*/
-/*}*/
 
 
 @media (min-width: 1700px) {
