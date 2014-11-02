@@ -6,6 +6,8 @@ angular.module('core').controller('HomeController', ['$scope', 'Authentication',
 		// This provides Authentication context.
 		$scope.authentication = Authentication;
 
+        $scope.allowFullScreen(true);
+
         //$scope.open = function() {
         //    $scope.title ='Open';
         //    $scope.subtitle = 'Our curriculum is free and open source. We use agile development on all projects.';
@@ -57,7 +59,7 @@ angular.module('core').controller('HomeController', ['$scope', 'Authentication',
         $scope.detailView = '/modules/core/views/community.client.view.html';
 
         $scope.getView = function() {
-            return '/modules/core/views/community.client.view.html';
+            return '/modules/core/views/pricing.client.view.html';
         }
 
 	}
