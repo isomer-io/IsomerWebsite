@@ -24,8 +24,8 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 		}).
 
 		state('instructors', {
-		url: '/instructors',
-		templateUrl: 'modules/core/views/instructors.client.view.html'
+			url: '/instructors',
+			templateUrl: 'modules/core/views/instructors.client.view.html'
 		}).
 
 		state('mastery', {
