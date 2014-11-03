@@ -2,7 +2,7 @@
 
 body {
   background-color: #343434;
-  /*background: url(../img/background.png) no-repeat center center fixed;*/
+  background: url(../img/hex_left_scaled.png) no-repeat 80% 80% fixed;
   background-size: cover;
   font-family: 'Quicksand', sans-serif;
 
@@ -99,6 +99,15 @@ h3 {
   color: #666;
   width: 100%;
   text-align: right;
+}
+
+.header-space {
+  margin-left: 40px;
+  margin-top: 40px;
+}
+
+.main-container {
+  margin-top: 140px;
 }
 
 .img-right-pad {

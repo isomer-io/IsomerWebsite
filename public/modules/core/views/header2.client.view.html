@@ -1,22 +1,27 @@
 <div class="container" data-ng-controller="HeaderController">
 
     <div class="col-md-4 navbar-fixed-top">
-        <div class="left">
+        <div class="header-space">
             <div class="img-responsive">
                 <img class="img-responsive" src="/modules/core/img/LogoLarge.png">
                 <h4 class="slogan pull-right">cure for the common code.</h4>
             </div>
 
             <div class="selling-points">
-                <h3 data-ng-click="selectContent('About Isomer')">About Isomer</h3>
-                <h3 data-ng-click="selectContent('Community')">Community</h3>
-                <h3 data-ng-click="selectContent('Curriculum')">Curriculum</h3>
-                <h3 data-ng-click="selectContent('Real World Application')">Real World Application</h3>
-                <h3 data-ng-click="selectContent('Students')">Students</h3>
+                <a data-ng-href="/#!/welcome"><h3>About Isomer</h3></a>
+                <a data-ng-href="/#!/community"><h3>Community</h3></a>
+                <a data-ng-href="/#!/instructors"><h3>Instructors</h3></a>
+                <a data-ng-href="/#!/welcome"><h3>Students</h3></a>
+
+
+                <a data-ng-href="/#!/realworld"><h3>Real World Application</h3></a>
+                <a data-ng-href="/#!/welcome"><h3>Full-Stack</h3></a>
+                <a data-ng-href="/#!/asynchronous"><h3>Mastery Learning Model</h3></a>
+                <a data-ng-href="/#!/pricing"><h3>Pricing</h3></a>
             </div>
         </div>
     </div>
 
-    <img class="col-md-4 img-responsive hexes" src="/modules/core/img/hex_flipped_small.png">
+    <!--<img class="col-md-4 img-responsive hexes" src="/modules/core/img/hex_flipped_small.png">-->
 
 </div>

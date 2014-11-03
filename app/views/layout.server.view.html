@@ -44,7 +44,7 @@
 
 <body class="ng-cloak">
 	<header data-ng-include="'/modules/core/views/header2.client.view.html'" class="navbar-fixed-top navbar-default"></header>
-	<section class="content" data-ng-controller="FullScreenController">
+	<section class="content col-md-9 pull-right main-container" data-ng-controller="FullScreenController">
 		<section data-ng-class="{container: !shouldAllowFullScreen}">
 			{% block content %}{% endblock %}
 		</section>

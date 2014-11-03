@@ -22,7 +22,7 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 
         state('asynchronous', {
 			url: '/asynchronous',
-			templateUrl: 'modules/core/views/community.client.view.html'
+			templateUrl: 'modules/core/views/asynchronous.client.view.html'
 		}).
 
 		state('community', {
