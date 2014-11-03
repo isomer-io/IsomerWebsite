@@ -48,7 +48,7 @@ angular.module('core').controller('HomeController', ['$scope', 'Authentication',
             if (content === 'Curriculum') {
 
             }
-            if (content === 'Real World Application') {
+            if (content === 'Real-world Applications') {
 
             }
             if (content === 'Students') {

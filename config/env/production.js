@@ -25,8 +25,8 @@ module.exports = {
 		js: 'public/dist/application.min.js'
 	},
 	facebook: {
-		clientID: process.env.FACEBOOK_ID || 'APP_ID',
-		clientSecret: process.env.FACEBOOK_SECRET || 'APP_SECRET',
+		clientID: process.env.FACEBOOK_ID || '1530061053898588',
+		clientSecret: process.env.FACEBOOK_SECRET || '58eeb46041eb9fbce84fc75d2eb78ef1',
 		callbackURL: 'http://localhost:3000/auth/facebook/callback'
 	},
 	twitter: {
@@ -35,18 +35,18 @@ module.exports = {
 		callbackURL: 'http://localhost:3000/auth/twitter/callback'
 	},
 	google: {
-		clientID: process.env.GOOGLE_ID || 'APP_ID',
-		clientSecret: process.env.GOOGLE_SECRET || 'APP_SECRET',
+		clientID: process.env.GOOGLE_ID || '820593985540-2c7lsm6i24cieaqfrktch1f1kmoqore8.apps.googleusercontent.com',
+		clientSecret: process.env.GOOGLE_SECRET || 'p5OVgMcFEQNfXNHpjmZtNd7y',
 		callbackURL: 'http://localhost:3000/auth/google/callback'
 	},
 	linkedin: {
-		clientID: process.env.LINKEDIN_ID || 'APP_ID',
-		clientSecret: process.env.LINKEDIN_SECRET || 'APP_SECRET',
+		clientID: process.env.LINKEDIN_ID || '2f2ce1f9-c1e3-4fa0-bb41-a6d3ec7c84ab',
+		clientSecret: process.env.LINKEDIN_SECRET || 'a9ddc085-77f4-46c4-b7d2-93c3dbd12757',
 		callbackURL: 'http://localhost:3000/auth/linkedin/callback'
 	},
 	github: {
-		clientID: process.env.GITHUB_ID || 'APP_ID',
-		clientSecret: process.env.GITHUB_SECRET || 'APP_SECRET',
+		clientID: process.env.GITHUB_ID || '56f56d785cc99754d717',
+		clientSecret: process.env.GITHUB_SECRET || '02c1707b50d68b67a5ccade81523cc5a18fb9993',
 		callbackURL: 'http://localhost:3000/auth/github/callback'
 	},
 	mailer: {

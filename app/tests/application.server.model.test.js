@@ -6,17 +6,17 @@
 var should = require('should'),
 	mongoose = require('mongoose'),
 	User = mongoose.model('User'),
-	Apply = mongoose.model('Apply');
+	Application = mongoose.model('Application');
 
 /**
  * Globals
  */
-var user, apply;
+var user, application;
 
 /**
  * Unit tests
  */
-describe('Apply Model Unit Tests:', function() {
+describe('Application Model Unit Tests:', function() {
 	beforeEach(function(done) {
 		user = new User({
 			firstName: 'Full',
@@ -28,8 +28,8 @@ describe('Apply Model Unit Tests:', function() {
 		});
 
 		user.save(function() { 
-			apply = new Apply({
-				name: 'Apply Name',
+			application = new Application({
+				name: 'Application Name',
 				user: user
 			});
 
@@ -39,16 +39,16 @@ describe('Apply Model Unit Tests:', function() {
 
 	describe('Method Save', function() {
 		it('should be able to save without problems', function(done) {
-			return apply.save(function(err) {
+			return application.save(function(err) {
 				should.not.exist(err);
 				done();
 			});
 		});
 
 		it('should be able to show an error when try to save without name', function(done) { 
-			apply.name = '';
+			application.name = '';
 
-			return apply.save(function(err) {
+			return application.save(function(err) {
 				should.exist(err);
 				done();
 			});
@@ -56,7 +56,7 @@ describe('Apply Model Unit Tests:', function() {
 	});
 
 	afterEach(function(done) { 
-		Apply.remove().exec();
+		Application.remove().exec();
 		User.remove().exec();
 
 		done();

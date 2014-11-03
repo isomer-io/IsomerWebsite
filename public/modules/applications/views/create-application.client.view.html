@@ -1,0 +1,65 @@
+<section data-ng-controller="ApplicationsController">
+    <div class="page-header">
+        <h1>New Application</h1>
+    </div>
+    <div class="col-md-12">
+        <form class="form-horizontal" data-ng-submit="create()" novalidate>
+            <fieldset>
+                <div class="form-group">
+                    <label class="control-label" for="firstName">Name</label>
+                    <div class="controls">
+                        <input type="text" data-ng-model="firstName" id="firstName" class="form-control"
+                               placeholder="First Name"
+                               required>
+                        <input type="text" data-ng-model="lastName" id="lastName" class="form-control"
+                               placeholder="Last Name"
+                               required>
+                        <div class="form-group">
+                            <label class="control-label">Radios</label>
+                            <div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="optionsRadios" id="instructorRadio" value="Male" checked="">
+                                        Male
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="optionsRadios" id="adminRadio" value="female">
+                                        Female
+                                    </label>
+                                </div>
+                                <div class="radio">
+                                    <label>
+                                        <input type="radio" name="optionsRadios" id="userRadio" value="Other">
+                                        Other
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="form-subheading">Contact Information</h3>
+                        <input type="text" data-ng-model="street" id="street" class="form-control" placeholder="Street"
+                               required>
+                        <input type="text" data-ng-model="city" id="city" class="form-control" placeholder="City"
+                               required>
+                        <input type="text" data-ng-model="state" id="state" class="form-control" placeholder="State"
+                               required>
+                        <input type="text" data-ng-model="zip" id="zip" class="form-control" placeholder="Zip Code"
+                               required>
+                        <input type="text" data-ng-model="phone" id="phone" class="form-control"
+                               placeholder="Phone Number"
+                               required>
+                        <input type="text" data-ng-model="email" id="email" class="form-control" placeholder="E-mail"
+                               required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="btn btn-default">
+                </div>
+				<div data-ng-show="error" class="text-danger">
+					<strong data-ng-bind="error"></strong>
+				</div>
+            </fieldset>
+        </form>
+    </div>
+</section>

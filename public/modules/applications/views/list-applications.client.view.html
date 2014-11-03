@@ -1,0 +1,27 @@
+<section data-ng-controller="ApplicationsController" data-ng-init="find()">
+    <div class="page-header">
+        <h1>Applications</h1>
+    </div>
+    <div class="list-group">
+        <a data-ng-repeat="application in applications" data-ng-href="#!/applications/{{application._id}}" class="list-group-item">
+			<small class="list-group-item-text">
+				Posted on
+				<span data-ng-bind="application.created | date:'medium'"></span>
+				by
+				<span data-ng-bind="application.user.displayName"></span>
+                <span data-ng-bind="application.user.gender"></span>
+                <span data-ng-bind="application.user.street"></span>
+                <span data-ng-bind="application.user.city"></span>
+                <span data-ng-bind="application.user.state"></span>
+                <span data-ng-bind="application.user.zip"></span>
+                <span data-ng-bind="application.user.phone"></span>
+                <span data-ng-bind="application.user.email"></span>
+
+			</small>
+			<h4 class="list-group-item-heading" data-ng-bind="application.name"></h4>
+        </a>
+    </div>
+    <div class="alert alert-warning text-center" data-ng-hide="!applications.$resolved || applications.length">
+    	No Applications yet, why don't you <a href="/#!/applications/create">create one</a>?
+    </div>
+</section>

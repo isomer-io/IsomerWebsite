@@ -8,3 +8,5 @@ app/tests/coverage/
 .bower-*/
 .idea/
 public/modules/core/img/icons
+config/env/development.js
+config/env/production.js
