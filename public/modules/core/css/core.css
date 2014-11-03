@@ -5,7 +5,10 @@ body {
   background: url(../img/hex_left_scaled.png) no-repeat 80% 80% fixed;
   background-size: cover;
   font-family: 'Quicksand', sans-serif;
+}
 
+.subpage {
+  left: 33%;
 }
 
 h1.head-room {
@@ -21,7 +24,6 @@ a, a:hover, a:focus {
   color: #98ca54;
   cursor: hand;
 }
-
 
 .fa {
   margin-top: 40px;
@@ -126,16 +128,14 @@ h3.black {
 
 .hexes {
   left: 0;
-  top: 0px;
+  top: 550px;
   position: absolute;
+
 }
 
 
 @media (min-width: 1700px) {
 
-}
-
-.isomer-deets {
 }
 
 .heading {
@@ -158,11 +158,6 @@ h3.black {
   margin: 2% auto;
   color: white;
   line-height: 150%;
-}
-
-/*todo i created a separate class for text on subpages, but some or all can probably be merged into main... just didn't want to alter all text on home page yet.*/
-
-.text-content-subpage {
   font-size: 1.5em;
 }
 
@@ -185,8 +180,6 @@ h3.black {
   color: #9dcb3b;
   line-height: 200%;
 }
-
-
 
 /* for button animation */
 .btn-pad {

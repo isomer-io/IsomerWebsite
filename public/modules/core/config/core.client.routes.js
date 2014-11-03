@@ -13,19 +13,7 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 			templateUrl: 'modules/core/views/home.client.view.html'
 		}).
 
-		//what's this route for?
-		//
-        //state('tree', {
-        //       url: '/tree',
-	 	//       templateUrl: 'modules/core/views/asynchronous.client.view.html'
-		//}).
-
-        state('asynchronous', {
-			url: '/asynchronous',
-			templateUrl: 'modules/core/views/asynchronous.client.view.html'
-		}).
-
-		state('community', {
+ 		state('community', {
 			url: '/community',
 			templateUrl: 'modules/core/views/community.client.view.html'
 		}).
@@ -40,7 +28,12 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 		templateUrl: 'modules/core/views/instructors.client.view.html'
 		}).
 
-		state('pricing', {
+		state('mastery', {
+			url: '/mastery',
+			templateUrl: 'modules/core/views/mastery.client.view.html'
+		}).
+
+			state('pricing', {
 			url: '/pricing',
 			templateUrl: 'modules/core/views/pricing.client.view.html'
 		}).
