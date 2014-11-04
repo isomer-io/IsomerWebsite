@@ -40,6 +40,8 @@ angular.element(document).ready(function () {
   //Then init the app
   angular.bootstrap(document, [ApplicationConfiguration.applicationModuleName]);
 });'use strict';
+// Use applicaion configuration module to register a new module
+ApplicationConfiguration.registerModule('applications');'use strict';
 // Use Applicaion configuration module to register a new module
 ApplicationConfiguration.registerModule('core');'use strict';
 // Use applicaion configuration module to register a new module
@@ -50,6 +52,89 @@ ApplicationConfiguration.registerModule('submissions');'use strict';
 ApplicationConfiguration.registerModule('subscribers');'use strict';
 // Use Applicaion configuration module to register a new module
 ApplicationConfiguration.registerModule('users');'use strict';
+//Setting up route
+angular.module('applications').config([
+  '$stateProvider',
+  function ($stateProvider) {
+    // Applications state routing
+    $stateProvider.state('listApplications', {
+      url: '/applications',
+      templateUrl: 'modules/applications/views/list-applications.client.view.html'
+    }).state('createApplication', {
+      url: '/applications/create',
+      templateUrl: 'modules/applications/views/create-application.client.view.html'
+    }).state('viewApplication', {
+      url: '/applications/:applicationId',
+      templateUrl: 'modules/applications/views/view-application.client.view.html'
+    }).state('editApplication', {
+      url: '/applications/:applicationId/edit',
+      templateUrl: 'modules/applications/views/edit-application.client.view.html'
+    });
+  }
+]);'use strict';
+// Applications controller
+angular.module('applications').controller('ApplicationsController', [
+  '$scope',
+  '$stateParams',
+  '$location',
+  'Authentication',
+  'Applications',
+  function ($scope, $stateParams, $location, Authentication, Applications) {
+    $scope.authentication = Authentication;
+    // Create new Application
+    $scope.create = function () {
+      // Create new Application object
+      var application = new Applications({ name: this.name });
+      // Redirect after save
+      application.$save(function (response) {
+        $location.path('applications/' + response._id);
+        // Clear form fields
+        $scope.name = '';
+      }, function (errorResponse) {
+        $scope.error = errorResponse.data.message;
+      });
+    };
+    // Remove existing Application
+    $scope.remove = function (application) {
+      if (application) {
+        application.$remove();
+        for (var i in $scope.applications) {
+          if ($scope.applications[i] === application) {
+            $scope.applications.splice(i, 1);
+          }
+        }
+      } else {
+        $scope.application.$remove(function () {
+          $location.path('applications');
+        });
+      }
+    };
+    // Update existing Application
+    $scope.update = function () {
+      var application = $scope.application;
+      application.$update(function () {
+        $location.path('applications/' + application._id);
+      }, function (errorResponse) {
+        $scope.error = errorResponse.data.message;
+      });
+    };
+    // Find a list of Applications
+    $scope.find = function () {
+      $scope.applications = Applications.query();
+    };
+    // Find existing Application
+    $scope.findOne = function () {
+      $scope.application = Applications.get({ applicationId: $stateParams.applicationId });
+    };
+  }
+]);'use strict';
+//Applications service used to communicate Applications REST endpoints
+angular.module('applications').factory('Applications', [
+  '$resource',
+  function ($resource) {
+    return $resource('applications/:applicationId', { applicationId: '@_id' }, { update: { method: 'PUT' } });
+  }
+]);'use strict';
 // Setting up route
 angular.module('core').config([
   '$stateProvider',
@@ -60,13 +145,31 @@ angular.module('core').config([
     // Home state routing
     $stateProvider.state('home', {
       url: '/',
-      templateUrl: 'modules/core/views/home.client.view.html'
-    }).state('tree', {
-      url: '/tree',
-      templateUrl: 'modules/core/views/tree.client.view.html'
-    }).state('planets', {
-      url: '/planets',
-      templateUrl: 'modules/core/views/planets.client.view.html'
+      templateUrl: 'modules/core/views/welcome.client.view.html'
+    }).state('community', {
+      url: '/community',
+      templateUrl: 'modules/core/views/community.client.view.html'
+    }).state('fullstack', {
+      url: '/fullstack',
+      templateUrl: 'modules/core/views/fullstack.client.view.html'
+    }).state('instructors', {
+      url: '/instructors',
+      templateUrl: 'modules/core/views/instructors.client.view.html'
+    }).state('mastery', {
+      url: '/mastery',
+      templateUrl: 'modules/core/views/mastery.client.view.html'
+    }).state('pricing', {
+      url: '/pricing',
+      templateUrl: 'modules/core/views/pricing.client.view.html'
+    }).state('realworld', {
+      url: '/realworld',
+      templateUrl: 'modules/core/views/realworld.client.view.html'
+    }).state('students', {
+      url: '/students',
+      templateUrl: 'modules/core/views/students.client.view.html'
+    }).state('welcome', {
+      url: '/welcome',
+      templateUrl: 'modules/core/views/welcome.client.view.html'
     });
   }
 ]);'use strict';
@@ -99,6 +202,34 @@ angular.module('core').controller('HeaderController', [
     $scope.$on('$stateChangeSuccess', function () {
       $scope.isCollapsed = false;
     });
+    $scope.myVar = false;
+    $scope.toggle = function () {
+      $scope.myVar = !$scope.myVar;
+    };
+    $scope.myVar1 = false;
+    $scope.toggle1 = function () {
+      $scope.myVar1 = !$scope.myVar1;
+    };
+    $scope.myVar2 = false;
+    $scope.toggle2 = function () {
+      $scope.myVar2 = !$scope.myVar2;
+    };
+    $scope.myVar3 = false;
+    $scope.toggle3 = function () {
+      $scope.myVar3 = !$scope.myVar3;
+    };
+    $scope.myVar4 = false;
+    $scope.toggle4 = function () {
+      $scope.myVar4 = !$scope.myVar4;
+    };
+    $scope.myVar5 = false;
+    $scope.toggle5 = function () {
+      $scope.myVar5 = !$scope.myVar5;
+    };
+    $scope.myVar6 = false;
+    $scope.toggle6 = function () {
+      $scope.myVar6 = !$scope.myVar6;
+    };
   }
 ]);'use strict';
 angular.module('core').controller('HomeController', [
@@ -107,23 +238,52 @@ angular.module('core').controller('HomeController', [
   function ($scope, Authentication) {
     // This provides Authentication context.
     $scope.authentication = Authentication;
-    $scope.open = function () {
-      $scope.title = 'Open';
-      $scope.subtitle = 'Our curriculum is free and open source. We use agile development on all projects.';
+    $scope.allowFullScreen(true);
+    //$scope.open = function() {
+    //    $scope.title ='Open';
+    //    $scope.subtitle = 'Our curriculum is free and open source. We use agile development on all projects.';
+    //};
+    //
+    //$scope.isomer = function() {
+    //    $scope.title = 'Isomer';
+    //    $scope.subtitle = 'The Open Source, blended classroom, non-profit, project-focused, community driven developer bootcamp.';
+    //};
+    //
+    //$scope.fullStack = function() {
+    //    $scope.title = 'Full-Stack';
+    //    $scope.subtitle = 'Understanding the entire stack is an essential engineering skill. From Databases to client, we\'ve got you covered.';
+    //};
+    //
+    //$scope.nonProfit = function() {
+    //    $scope.title = 'Non-Profit';
+    //    $scope.subtitle = 'Our aim is to provide the best education as accessibly as possible. Know that your tuition is only being allocated for as efficient of teaching as possible.';
+    //};
+    //
+    //$scope.isomer();
+    $scope.selection = {
+      aboutIsomer: true,
+      community: false,
+      curriculum: false,
+      realWorldApplication: false,
+      students: false
     };
-    $scope.isomer = function () {
-      $scope.title = 'Isomer';
-      $scope.subtitle = 'The Open Source, blended classroom, non-profit, project-focused, community driven developer bootcamp.';
+    $scope.selectContent = function (content) {
+      if (content === 'About Isomer') {
+        $scope.selection;
+      }
+      if (content === 'Community') {
+      }
+      if (content === 'Curriculum') {
+      }
+      if (content === 'Real-world Applications') {
+      }
+      if (content === 'Students') {
+      }
     };
-    $scope.fullStack = function () {
-      $scope.title = 'Full-Stack';
-      $scope.subtitle = 'Understanding the entire stack is an essential engineering skill. From Databases to client, we\'ve got you covered.';
+    $scope.detailView = '/modules/core/views/community.client.view.html';
+    $scope.getView = function () {
+      return '/modules/core/views/pricing.client.view.html';
     };
-    $scope.nonProfit = function () {
-      $scope.title = 'Non-Profit';
-      $scope.subtitle = 'Our aim is to provide the best education as accessibly as possible. Know that your tuition is only being allocated for as efficient of teaching as possible.';
-    };
-    $scope.isomer();
   }
 ]);'use strict';
 angular.module('core').directive('tree', function () {
