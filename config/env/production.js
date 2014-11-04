@@ -60,3 +60,5 @@ module.exports = {
 		}
 	}
 };
+
+//test for .gitignore
