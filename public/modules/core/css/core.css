@@ -124,11 +124,17 @@ h3.black {
   padding-top: 20px;
 }
 
-.hexes {
-  left: 0;
-  top: 550px;
-  position: absolute;
+.hexes-container {
+  position: relative;
+  height: 100%;
+}
 
+.hexes {
+  top: 340px;
+  position: absolute;
+  padding: 0;
+  /*bottom: 0;*/
+  /*width: 30%;*/
 }
 
 
