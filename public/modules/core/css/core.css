@@ -164,6 +164,10 @@ h3.black {
   font-size: 1.5em;
 }
 
+.list-content {
+  text-align: left;
+}
+
 .icon-heading {
   text-align: center;
   /*margin: 8% auto 0 auto;*/
