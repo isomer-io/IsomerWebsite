@@ -69,6 +69,10 @@ h3 {
   color: darkgray;
 }
 
+.selling-points h3 {
+    font-size: 2em;
+}
+
 .selling-point {
     margin-bottom: 10px;
     width: 160px;
