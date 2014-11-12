@@ -3,8 +3,8 @@
 module.exports = {
 	app: {
 		title: 'Isomer',
-		description: 'Full-Stack JavaScript with MongoDB, Express, AngularJS, and Node.js',
-		keywords: 'mongodb, express, angularjs, node.js, mongoose, passport'
+		description: 'Learn to code with exceptional software engineers at Isomer Academy -- Utah\'s most ambitious dev bootcamp.',
+		keywords: 'mongodb, express, angularjs, node.js, dev bootcamp, utah, web development, learn to code'
 	},
 	port: process.env.PORT || 3000,
 	templateEngine: 'swig',
