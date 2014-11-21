@@ -1,10 +1,15 @@
-@import url(http://fonts.googleapis.com/css?family=Lato|Quicksand:300,400,700|Raleway:400,100,200,300,500,600,700,800,900);
+@import url(http://fonts.googleapis.com/css?family=Lato|Open+Sans:300|Josefin+Sans:300);
 
 body {
   background-color: #343434;
   /*background: url(../img/hex_left_scaled.png) no-repeat 100% 100% fixed;*/
   background-size: cover;
-  font-family: 'Quicksand', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+
+}
+
+h1, h3, .selling-points {
+    font-family: 'Lato', sans-serif;
 }
 
 .container {
@@ -62,7 +67,6 @@ h3 {
 }
 
 .selling-points {
-  margin-left: 125px;
 }
 
 .selling-points h3:hover {
@@ -70,7 +74,7 @@ h3 {
 }
 
 .selling-points h3 {
-    font-size: 2em;
+    font-size: 1.5em;
 }
 
 .selling-point {
@@ -112,7 +116,7 @@ h3 {
 }
 
 .header-space {
-  margin-left: 40px;
+  /*margin-left: 40px;*/
   margin-top: 40px;
 }
 
@@ -318,4 +322,13 @@ h3.black {
 .button .text {
   position: relative;
   letter-spacing: .03em;
+}
+
+.header2 {
+    background-color: #242424;
+    height: 100vh;
+    margin-left: 150px;
+    -webkit-box-shadow: 0px 0px 20px 4px rgba(0,0,0,0.65);
+    -moz-box-shadow: 0px 0px 20px 4px rgba(0,0,0,0.65);
+    box-shadow: 0px 0px 20px 4px rgba(0,0,0,0.65);
 }
