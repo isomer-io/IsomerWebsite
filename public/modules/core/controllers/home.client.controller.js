@@ -6,8 +6,6 @@ angular.module('core').controller('HomeController', ['$scope', 'Authentication',
 		// This provides Authentication context.
 		$scope.authentication = Authentication;
 
-        $scope.allowFullScreen(true);
-
         //$scope.open = function() {
         //    $scope.title ='Open';
         //    $scope.subtitle = 'Our curriculum is free and open source. We use agile development on all projects.';
