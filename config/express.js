@@ -18,7 +18,8 @@ var express = require('express'),
 	flash = require('connect-flash'),
 	config = require('./config'),
 	consolidate = require('consolidate'),
-	path = require('path');
+	path = require('path'),
+    seo = require('mean-seo');
 
 module.exports = function(db) {
 	// Initialize express app
@@ -36,6 +37,11 @@ module.exports = function(db) {
 	app.locals.facebookAppId = config.facebook.clientID;
 	app.locals.jsFiles = config.getJavaScriptAssets();
 	app.locals.cssFiles = config.getCSSAssets();
+
+    app.use(seo({
+        cacheClient: 'disk', // Can be 'disk' or 'redis'
+        cacheDuration: 2 * 60 * 60 * 24 * 1000 // In milliseconds for disk cache
+    }));
 
 	// Passing the request url to environment locals
 	app.use(function(req, res, next) {
