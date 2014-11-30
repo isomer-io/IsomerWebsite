@@ -116,7 +116,7 @@ module.exports = function(db) {
 
     app.use(seo({
         cacheClient: 'disk', // Can be 'disk' or 'redis'
-        cacheDuration: 2 * 60 * 60 * 24 * 1000 // In milliseconds for disk cache
+        cacheDuration: 2000 // In milliseconds for disk cache
     }));
 
 	// Globbing routing files
