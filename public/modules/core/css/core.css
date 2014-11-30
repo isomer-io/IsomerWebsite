@@ -74,7 +74,7 @@ h3 {
 }
 
 .selling-points h3 {
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 
 .selling-point {
@@ -121,7 +121,7 @@ h3 {
 }
 
 .main-container {
-  margin-top: 140px;
+  margin-top: 20px;
   /*margin-left: 320px;*/
 }
 
@@ -325,13 +325,26 @@ h3.black {
   letter-spacing: .03em;
 }
 
+.header2 img {
+    margin-top: 20px;
+}
+
 .header2 {
+    margin-top: 20px;
     background-color: #242424;
-    margin-left: 50px;
+    /*margin-left: 50px;*/
     left: 0px;
-    height: 400px;
-    max-width: 300px;
-    -webkit-box-shadow: 0px 0px 20px 4px rgba(0,0,0,0.65);
-    -moz-box-shadow: 0px 0px 20px 4px rgba(0,0,0,0.65);
-    box-shadow: 0px 0px 20px 4px rgba(0,0,0,0.65);
+    -webkit-box-shadow: 0px 0px 10px 4px rgba(0,0,0,0.65);
+    -moz-box-shadow: 0px 0px 10px 4px rgba(0,0,0,0.65);
+    box-shadow: 0px 0px 10px 4px rgba(0,0,0,0.65);
+}
+
+.col-centered{
+    float: none;
+    margin: 0 auto;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+    color: black;
+    background-color: #9dcb3b;
 }

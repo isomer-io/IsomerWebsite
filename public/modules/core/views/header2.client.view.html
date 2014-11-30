@@ -1,21 +1,22 @@
-<div data-ng-controller="HeaderController" >
+<div data-ng-controller="HeaderController" class="container header2 text-center">
     <div class="navbar-header">
-        <button class="navbar-toggle" type="button" data-ng-click="toggleCollapsibleMenu()">
+        <div class="row ">
+            <img class="col-centered col-md-6 col-sm-6 col-xs-6 img-responsive" src="/modules/core/img/brand/isomer_full_logo_no_margin.png">
+            <!--<h4 class="slogan pull-right">cure for the common code.</h4>-->
+        </div>
+        <button class="btn btn-success btn-lg btn-block navbar-toggle" type="button" data-ng-click="toggleCollapsibleMenu()">
             <span class="sr-only">Toggle navigation</span>
+            Menu
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
         </button>
-        <a href="/#!/" class="navbar-brand">Isomer</a>
     </div>
-    <nav class="collapse navbar-collapse col-md-3 header2" collapse="!isCollapsed" role="navigation" >
-        <div class="header-space">
-            <div class="img-responsive">
-                <img class="img-responsive" src="/modules/core/img/brand/isomer_full_logo_no_margin.png">
-                <!--<h4 class="slogan pull-right">cure for the common code.</h4>-->
-            </div>
+    <nav class="collapse navbar-collapse" collapse="!isCollapsed" role="navigation" >
 
-            <ul class="nav nav-tabs selling-points">
+
+
+            <ul class="nav navbar-nav selling-points">
                 <li>
                     <a data-ng-href="/#!/welcome"><h3 ui-route="/welcome" ng-class="{sellingPointSelect: $uiRoute}">About Isomer</h3></a>
                 </li>
@@ -38,7 +39,7 @@
                     <a data-ng-href="/#!/pricing"><h3>Pricing</h3></a>
                 </li>
             </ul>
-        </div>
+
     </nav>
 </div>
 
