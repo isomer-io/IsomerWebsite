@@ -1,9 +1,11 @@
 <div data-ng-controller="HeaderController" class="container header2 text-center">
     <div class="navbar-header">
-        <div class="row ">
+        <a data-ng-href="/">
+        <div class="row">
             <img class="col-centered col-md-6 col-sm-6 col-xs-6 img-responsive" src="/modules/core/img/brand/isomer_full_logo_no_margin.png">
             <!--<h4 class="slogan pull-right">cure for the common code.</h4>-->
         </div>
+        </a>
         <button class="btn btn-success btn-lg btn-block navbar-toggle" type="button" data-ng-click="toggleCollapsibleMenu()">
             <span class="sr-only">Toggle navigation</span>
             Menu
@@ -18,7 +20,7 @@
 
             <ul class="nav navbar-nav selling-points">
                 <li>
-                    <a data-ng-href="/#!/welcome"><h3 ui-route="/welcome" ng-class="{sellingPointSelect: $uiRoute}">About Isomer</h3></a>
+                    <a data-ng-href="/"><h3 ui-route="/welcome">About Isomer</h3></a>
                 </li>
                 <li>
                     <a data-ng-href="/#!/community"><h3>Community</h3></a>
