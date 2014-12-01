@@ -51,7 +51,12 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 		state('welcome', {
 			url: '/welcome',
 			templateUrl: 'modules/core/views/welcome.client.view.html'
-		});
+		}).
+
+        state('confirm', {
+                url: '/confirmwebstorm',
+                templateUrl: 'modules/core/views/confirmation.client.view.html'
+            });
 
 	}
 ]);
