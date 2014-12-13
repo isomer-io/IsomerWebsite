@@ -25,9 +25,8 @@ module.exports = {
 				'public/lib/angular-ui-router/release/angular-ui-router.js',
 				'public/lib/angular-ui-utils/ui-utils.js',
 				'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
-                'public/lib/prefixfree/prefixfree.min.js',
-                'http://codepen.io/assets/libs/fullpage/jquery.js'
-			]
+                'public/lib/prefixfree/prefixfree.min.js'
+            ]
 		},
 		css: [
 			'public/modules/**/css/*.css'
