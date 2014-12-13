@@ -53,6 +53,11 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 			templateUrl: 'modules/core/views/welcome.client.view.html'
 		}).
 
+       state('sitemap', {
+                url: '/sitemap',
+                templateUrl: 'modules/core/views/header2.client.view.html'
+            }).
+
         state('confirm', {
                 url: '/confirmwebstorm',
                 templateUrl: 'modules/core/views/confirmation.client.view.html'
