@@ -18,34 +18,9 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 			templateUrl: 'modules/core/views/community.client.view.html'
 		}).
 
-		state('fullstack', {
-			url: '/fullstack',
-			templateUrl: 'modules/core/views/fullstack.client.view.html'
-		}).
-
-		state('instructors', {
-			url: '/instructors',
-			templateUrl: 'modules/core/views/instructors.client.view.html'
-		}).
-
-		state('mastery', {
-			url: '/mastery',
-			templateUrl: 'modules/core/views/mastery.client.view.html'
-		}).
-
 			state('pricing', {
 			url: '/pricing',
 			templateUrl: 'modules/core/views/pricing.client.view.html'
-		}).
-
-		state('realworld', {
-			url: '/realworld',
-			templateUrl: 'modules/core/views/realworld.client.view.html'
-		}).
-
-		state('students', {
-			url: '/students',
-			templateUrl: 'modules/core/views/students.client.view.html'
 		}).
 
 		state('welcome', {
@@ -56,6 +31,14 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
        state('sitemap', {
                 url: '/sitemap',
                 templateUrl: 'modules/core/views/header2.client.view.html'
+            }).
+       state('experience', {
+                url: '/experience',
+                templateUrl: 'modules/core/views/experience.client.view.html'
+            }).
+       state('curriculum', {
+                url: '/curriculum',
+                templateUrl: 'modules/core/views/curriculum.client.view.html'
             }).
 
         state('confirm', {

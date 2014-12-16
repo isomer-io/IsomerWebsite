@@ -151,7 +151,7 @@ angular.module('core').config([
       templateUrl: 'modules/core/views/community.client.view.html'
     }).state('fullstack', {
       url: '/fullstack',
-      templateUrl: 'modules/core/views/fullstack.client.view.html'
+      templateUrl: 'modules/core/views/curriculum.client.view.html'
     }).state('instructors', {
       url: '/instructors',
       templateUrl: 'modules/core/views/instructors.client.view.html'
