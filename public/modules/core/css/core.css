@@ -161,7 +161,7 @@ h3.black {
 
 .heading {
   text-align: center;
-  margin: 0 auto;
+  margin: 0 auto 2% auto;
   color: #9dcb3b;
 }
 
@@ -353,6 +353,10 @@ h3.black {
 
 .cirriculum h4 {
     color: #9dcb3b;
+}
+
+.cirriculum h3 {
+    margin-bottom: 2%;
 }
 
 .navbar.center .navbar-inner {
