@@ -67,6 +67,9 @@ h3 {
 }
 
 .selling-points {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .selling-points h3:hover {
@@ -346,9 +349,17 @@ h3.black {
     margin: 0 auto;
 }
 
-.nav > li > a:hover, .nav > li > a:focus {
-    color: black;
+.nav > li > a:hover {
     background-color: #9dcb3b;
+}
+
+.nav > li > a:hover > h3 {
+    color: #343434;
+}
+
+
+.nav > li > a:hover, .nav > li > a:focus > h3 {
+    color: black;
 }
 
 .cirriculum h4 {
@@ -359,16 +370,21 @@ h3.black {
     margin-bottom: 2%;
 }
 
-.navbar.center .navbar-inner {
-    text-align: center;
-}
-
-.navbar.center .navbar-inner .nav {
-    display:inline-block;
-    float: none;
-}
-
 .experience i {
     padding: 5px;
     color: #9dcb3b;
+}
+
+@media (min-width: 768px){
+    .navbar-nav{
+        margin: 0 auto;
+        display: table;
+        table-layout: fixed;
+        float:none;
+    }
+}
+
+.collapse ul {
+    margin-top: 1%;
+    margin-bottom: 1%;
 }
