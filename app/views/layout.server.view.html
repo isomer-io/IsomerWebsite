@@ -2,7 +2,10 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 
 <head>
-	<title>{{title}}</title>
+    <script src="//use.typekit.net/ywn5rva.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>
+
+    <title>{{title}}</title>
 
 	<!-- General META -->
 	<meta charset="utf-8">
@@ -41,6 +44,7 @@
 	<!--[if lt IE 9]>
 		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
 	<![endif]-->
+
 </head>
 
 <body class="ng-cloak">
@@ -82,12 +86,12 @@
                                 </li>
                                 <li class="divider"></li>
                                 <li>
-                                    <a href="/#!/pricing">Pricing</a>
+                                    <a href="/#!/pricing">Schedule & Pricing</a>
                                 </li>
                             </ul>
                         </li>
                         <li>
-                            <a href="/#!/pricing"><h3>Apply Now</h3></a>
+                            <a href="https://docs.google.com/forms/d/1RcpnidCvXZVjkDTuDHoibNHyyIUFfRLcvXpP2xP3Jdg/viewform"><h3>Apply Now</h3></a>
                         </li>
                     </ul>
 
@@ -100,10 +104,32 @@
 			{% block content %}{% endblock %}
 		</section>
         <div class="line-separator"></div>
-        <p class="text-center text-content" style="text-align: center">
-            340E 400S<br>
-            Salt Lake City<br>
-            84111<br>
+
+        <div class="container">
+            <div class="row-fluid">
+
+                    <div class="col-md-4">
+                        Housed inside of <a href="http://www.sustainablestartups.org" target="_blank"><img src="/modules/core/img/brand/sustainable.png"></a>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="footer">
+                            340E 400S | Salt Lake City, UT | 84111
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="col-md-offset-4 btn-group">
+                            <a class="btn" href="#"><i class="fa fa-git"></i></a>
+                            <a class="btn" href="#"><i class="fa fa-twitter"></i></a>
+                            <a class="btn" href="#"><i class="fa fa-facebook"></i></a>
+                            <a class="btn" href="#"><i class="fa fa-linkedin"></i></a>
+                        </div>
+                    </div>
+
+
+            </div>
+        </div>
 	</section>
 
 	<!--Embedding The User Object-->
