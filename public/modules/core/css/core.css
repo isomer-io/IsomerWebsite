@@ -367,3 +367,8 @@ h3.black {
     display:inline-block;
     float: none;
 }
+
+.experience i {
+    padding: 5px;
+    color: #9dcb3b;
+}
