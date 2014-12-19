@@ -4,8 +4,9 @@ body {
   background-color: #343434;
   /*background: url(../img/hex_left_scaled.png) no-repeat 100% 100% fixed;*/
   background-size: cover;
-  font-family: 'Open Sans', sans-serif;
-
+  /*font-family: 'Open Sans', sans-serif;*/
+  font-family: signo, "Lucida Grande", "Helvetica Nueue", sans-serif;
+  overflow-x: hidden;
 }
 
 h1, h3, .selling-points {
@@ -28,6 +29,7 @@ h1.head-room {
 
 i {
   color: rgba(0,0,0,0.6);
+
 }
 
 a, a:hover, a:focus {
@@ -37,10 +39,10 @@ a, a:hover, a:focus {
 }
 
 .fa {
-  margin-top: 40px;
+  /*margin-top: 40px;*/
   margin-left: auto;
   margin-right: auto;
-  font-size: 60px;
+  font-size: 20px;
   z-index: 0;
 }
 
@@ -179,11 +181,22 @@ h3.black {
   text-align: justify;
   color: white;
   line-height: 150%;
-  font-size: 1.5em;
+}
+
+.home.text-content  {
+    font-size: 2.25rem;
+    text-align: justify;
+    color: white;
+    line-height: 200%;
+}
+
+div.row p.text-content:first-letter {
+    font-size: 4rem;
 }
 
 .class-photo {
     margin-bottom: 20px;
+    border-radius: 15px;
 }
 
 .list-content {
@@ -330,6 +343,15 @@ h3.black {
   letter-spacing: .03em;
 }
 
+.btn.btn-primary {
+    margin-top: 15px;
+    padding: 10px 15px;
+    font-size: 1.75rem;
+    font-weight: bold;
+    background-color: #9dcb3b;
+    color: #242424;
+}
+
 .header2 img {
     margin-top: 20px;
 }
@@ -387,4 +409,29 @@ h3.black {
 .collapse ul {
     margin-top: 1%;
     margin-bottom: 1%;
+}
+
+.footer {
+    font-size: 1.75rem;
+}
+
+aside {
+    font-size: 2.15rem;
+    color: #9dcb3b;
+}
+
+aside a {
+    color: oldlace;
+}
+
+aside a:hover, aside a:focus {
+    text-decoration: underline;
+    text-decoration-color: #9dcb3b;
+    color: oldlace;
+}
+
+aside p {
+    font-style: italic;
+    font-size: 2rem;
+    margin-left: 5%;
 }
