@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Lato|Open+Sans:300|Josefin+Sans:300);
 
 body {
-  background-color: #343434;
+  background-color: #f1f3f2;
   /*background: url(../img/hex_left_scaled.png) no-repeat 100% 100% fixed;*/
   background-size: cover;
   /*font-family: 'Open Sans', sans-serif;*/
@@ -40,10 +40,10 @@ a, a:hover, a:focus {
 
 .fa {
   /*margin-top: 40px;*/
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 20px;
-  z-index: 0;
+  /*margin-left: auto;*/
+  /*margin-right: auto;*/
+  /*font-size: 20px;*/
+  /*z-index: 0;*/
 }
 
 .fa-subpage {
@@ -61,7 +61,7 @@ h2 {
 }
 
 h3 {
-  color: #d3d3d3;
+  /*color: #d3d3d3;*/
 }
 
 .selling-point-select {
@@ -69,7 +69,6 @@ h3 {
 }
 
 .selling-points {
-    width: 400px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -81,7 +80,7 @@ h3 {
 .selling-points h3 {
     font-size: 1.2em;
     margin: 0;
-
+    color: #f5f5f5;
 }
 
 .selling-point {
@@ -179,14 +178,12 @@ h3.black {
 .text-content {
   font-size: 1.5em;
   text-align: justify;
-  color: white;
   line-height: 150%;
 }
 
 .home.text-content  {
     font-size: 2.25rem;
     text-align: justify;
-    color: white;
     line-height: 200%;
 }
 
@@ -421,7 +418,7 @@ aside {
 }
 
 aside a {
-    color: oldlace;
+    color: steelblue;
 }
 
 aside a:hover, aside a:focus {
@@ -434,4 +431,8 @@ aside p {
     font-style: italic;
     font-size: 2rem;
     margin-left: 5%;
+}
+
+.sustainable {
+    height: 50px;
 }
