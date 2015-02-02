@@ -7,6 +7,7 @@ body {
   /*font-family: 'Open Sans', sans-serif;*/
   font-family: signo, "Lucida Grande", "Helvetica Nueue", sans-serif;
   overflow-x: hidden;
+    padding-bottom: 5%;
 }
 
 h1, h3, .selling-points {
