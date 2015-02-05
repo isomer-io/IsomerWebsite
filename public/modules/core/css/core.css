@@ -437,3 +437,7 @@ aside p {
 .sustainable {
     height: 50px;
 }
+
+.logo {
+    max-width: 50%;
+}
