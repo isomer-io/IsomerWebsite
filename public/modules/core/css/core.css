@@ -439,8 +439,22 @@ aside p {
     height: 50px;
 }
 
+@media (max-width: 786px) {
+    .logo {
+        max-width: 80%;
+        float: none;
+        margin: 0 auto;
+    }
+}
+
+@media (min-width: 786px) {
+    .logo {
+        max-width: 40%;
+    }
+}
+
 .logo {
-    max-width: 40%;
+    /*max-width: 40%;*/
     margin-top: 1%;
     margin-bottom: 1%;
     /*max-height: 50px;*/
