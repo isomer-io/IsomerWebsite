@@ -14,6 +14,13 @@ h1, h3, .selling-points {
     font-family: 'Lato', sans-serif;
 }
 
+header {
+    background-color: #231f20;
+    -webkit-box-shadow: 0px 0px 10px 4px rgba(0,0,0,0.65);
+    -moz-box-shadow: 0px 0px 10px 4px rgba(0,0,0,0.65);
+    box-shadow: 0px 0px 10px 4px rgba(0,0,0,0.65);
+}
+
 .container {
     /*padding-left: 40px;*/
     /*padding-right: 40px;*/
@@ -350,18 +357,12 @@ div.row p.text-content:first-letter {
     color: #242424;
 }
 
-.header2 img {
-    margin-top: 20px;
-}
-
 .header2 {
     /*margin-top: 20px;*/
-    background-color: #231f20;
+    /*background-color: #231f20;*/
     /*margin-left: 50px;*/
     /*left: 0px;*/
-    /*-webkit-box-shadow: 0px 0px 10px 4px rgba(0,0,0,0.65);*/
-    /*-moz-box-shadow: 0px 0px 10px 4px rgba(0,0,0,0.65);*/
-    /*box-shadow: 0px 0px 10px 4px rgba(0,0,0,0.65);*/
+
 }
 
 .col-centered{
@@ -439,7 +440,10 @@ aside p {
 }
 
 .logo {
-    max-width: 50%;
+    max-width: 40%;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    /*max-height: 50px;*/
 }
 
 .home-page-space {
