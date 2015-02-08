@@ -25,11 +25,44 @@ var app = require('./config/express')(db);
 // Bootstrap passport config
 require('./config/passport')();
 
-// Start the app by listening on <port>
-app.listen(config.port);
+var cluster = require('cluster');
+var numCPUs = require('os').cpus().length;
+
+if (process.env.NODE_ENV === 'production') {
+	if (cluster.isMaster) {
+		// Fork workers.
+		for (var i = 0; i < numCPUs; i++) {
+			cluster.fork();
+		}
+
+		cluster.on('exit', function(worker, code, signal) {
+			console.log('worker ' + worker.process.pid + ' died');
+		});
+		// Listen for dying workers
+		cluster.on('exit', function (worker) {
+
+			// Replace the dead worker,
+			// we're not sentimental
+			console.log('Worker ' + worker.id + ' died :(');
+			cluster.fork();
+
+		});
+	} else {
+		// Start the app by listening on <port>
+		app.listen(config.port);
 
 // Expose app
-exports = module.exports = app;
+		exports = module.exports = app;
 
 // Logging initialization
-console.log('MEAN.JS application started on port ' + config.port);
+		console.log('MEAN.JS application started on port ' + config.port);
+	}
+} else {
+	app.listen(config.port);
+
+// Expose app
+	exports = module.exports = app;
+
+// Logging initialization
+	console.log('MEAN.JS application started on port ' + config.port);
+}
