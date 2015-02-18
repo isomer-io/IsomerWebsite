@@ -40,6 +40,10 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
                 url: '/curriculum',
                 templateUrl: 'modules/core/views/curriculum.client.view.html'
             }).
+			state('reviews', {
+				url: '/reviews',
+				templateUrl: 'modules/core/views/reviews.client.view.html'
+			}).
 
         state('confirm', {
                 url: '/confirmwebstorm',
