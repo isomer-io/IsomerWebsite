@@ -145,31 +145,31 @@ angular.module('core').config([
     // Home state routing
     $stateProvider.state('home', {
       url: '/',
-      templateUrl: 'modules/core/views/welcome.client.view.html'
+      templateUrl: 'modules/core/views/home.client.view.html'
     }).state('community', {
       url: '/community',
       templateUrl: 'modules/core/views/community.client.view.html'
-    }).state('fullstack', {
-      url: '/fullstack',
-      templateUrl: 'modules/core/views/curriculum.client.view.html'
-    }).state('instructors', {
-      url: '/instructors',
-      templateUrl: 'modules/core/views/instructors.client.view.html'
-    }).state('mastery', {
-      url: '/mastery',
-      templateUrl: 'modules/core/views/mastery.client.view.html'
     }).state('pricing', {
       url: '/pricing',
       templateUrl: 'modules/core/views/pricing.client.view.html'
-    }).state('realworld', {
-      url: '/realworld',
-      templateUrl: 'modules/core/views/realworld.client.view.html'
-    }).state('students', {
-      url: '/students',
-      templateUrl: 'modules/core/views/students.client.view.html'
     }).state('welcome', {
       url: '/welcome',
       templateUrl: 'modules/core/views/welcome.client.view.html'
+    }).state('sitemap', {
+      url: '/sitemap',
+      templateUrl: 'modules/core/views/header2.client.view.html'
+    }).state('experience', {
+      url: '/experience',
+      templateUrl: 'modules/core/views/experience.client.view.html'
+    }).state('curriculum', {
+      url: '/curriculum',
+      templateUrl: 'modules/core/views/curriculum.client.view.html'
+    }).state('reviews', {
+      url: '/reviews',
+      templateUrl: 'modules/core/views/reviews.client.view.html'
+    }).state('confirm', {
+      url: '/confirmwebstorm',
+      templateUrl: 'modules/core/views/confirmation.client.view.html'
     });
   }
 ]);'use strict';
@@ -238,7 +238,6 @@ angular.module('core').controller('HomeController', [
   function ($scope, Authentication) {
     // This provides Authentication context.
     $scope.authentication = Authentication;
-    $scope.allowFullScreen(true);
     //$scope.open = function() {
     //    $scope.title ='Open';
     //    $scope.subtitle = 'Our curriculum is free and open source. We use agile development on all projects.';
