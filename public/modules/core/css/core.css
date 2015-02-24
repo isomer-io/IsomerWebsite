@@ -1,12 +1,9 @@
 @import url(http://fonts.googleapis.com/css?family=Lato|Open+Sans:300|Josefin+Sans:300);
 
 body {
-  background-color: #f1f3f2;
-  /*background: url(../img/hex_left_scaled.png) no-repeat 100% 100% fixed;*/
-  background-size: cover;
-  /*font-family: 'Open Sans', sans-serif;*/
-  font-family: signo, "Lucida Grande", "Helvetica Nueue", sans-serif;
-  overflow-x: hidden;
+    background-color: #f1f3f2;
+    font-family: signo, "Lucida Grande", "Helvetica Nueue", sans-serif;
+    overflow-x: hidden;
     padding-bottom: 5%;
 }
 
@@ -19,20 +16,6 @@ header {
     -webkit-box-shadow: 0px 0px 10px 4px rgba(0,0,0,0.65);
     -moz-box-shadow: 0px 0px 10px 4px rgba(0,0,0,0.65);
     box-shadow: 0px 0px 10px 4px rgba(0,0,0,0.65);
-}
-
-.container {
-    /*padding-left: 40px;*/
-    /*padding-right: 40px;*/
-}
-
-.subpage {
-    /*margin-left: 40px;*/
-    /*margin-right: 40px;*/
-}
-
-h1.head-room {
-  margin-top: 150px;
 }
 
 i {
@@ -52,10 +35,6 @@ a, a:hover, a:focus {
   /*margin-right: auto;*/
   /*font-size: 20px;*/
   /*z-index: 0;*/
-}
-
-.fa-subpage {
-  margin: 20px;
 }
 
 h2 {
@@ -153,19 +132,6 @@ h3.black {
   padding-top: 20px;
 }
 
-.hexes-container {
-  position: relative;
-  height: 100%;
-}
-
-.hexes {
-  top: 340px;
-  position: absolute;
-  padding: 0;
-  /*bottom: 0;*/
-  /*width: 30%;*/
-}
-
 
 @media (min-width: 1700px) {
 
@@ -189,32 +155,8 @@ h3.black {
   line-height: 150%;
 }
 
-.home.text-content  {
-    font-size: 2.25rem;
-    text-align: justify;
-    line-height: 200%;
-}
-
 div.row p.text-content:first-letter {
     font-size: 4rem;
-}
-
-.class-photo {
-    margin-bottom: 20px;
-    border-radius: 15px;
-}
-
-.list-content {
-  text-align: left;
-}
-
-.icon-heading {
-  text-align: center;
-  /*margin: 8% auto 0 auto;*/
-  font-size: 12vmin;
-  color: #9dcb3b;
-  line-height: 1;
-  margin-top: 25px;
 }
 
 .line-separator {
@@ -348,15 +290,6 @@ div.row p.text-content:first-letter {
   letter-spacing: .03em;
 }
 
-.btn.btn-primary {
-    margin-top: 15px;
-    padding: 10px 15px;
-    font-size: 1.75rem;
-    font-weight: bold;
-    background-color: #9dcb3b;
-    color: #242424;
-}
-
 .header2 {
     /*margin-top: 20px;*/
     /*background-color: #231f20;*/
@@ -368,32 +301,6 @@ div.row p.text-content:first-letter {
 .col-centered{
     float: none;
     margin: 0 auto;
-}
-
-.nav > li > a:hover {
-    background-color: #9dcb3b;
-}
-
-.nav > li > a:hover > h3 {
-    color: #343434;
-}
-
-
-.nav > li > a:hover, .nav > li > a:focus > h3 {
-    color: black;
-}
-
-.cirriculum h4 {
-    color: #9dcb3b;
-}
-
-.cirriculum h3 {
-    margin-bottom: 2%;
-}
-
-.experience i {
-    padding: 5px;
-    color: #9dcb3b;
 }
 
 @media (min-width: 768px){
@@ -463,4 +370,8 @@ aside p {
 
 .home-page-space {
     margin-top: 3%;
+}
+
+img {
+    border-radius: 15px;
 }

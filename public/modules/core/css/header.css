@@ -1,0 +1,14 @@
+/*NAVIGATION BAR*/
+
+.nav > li > a:hover {
+    background-color: #9dcb3b;
+}
+
+.nav > li > a:hover > h3 {
+    color: #343434;
+}
+
+
+.nav > li > a:hover, .nav > li > a:focus > h3 {
+    color: black;
+}
