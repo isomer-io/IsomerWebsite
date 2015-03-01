@@ -13,9 +13,9 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 			templateUrl: 'modules/core/views/home.client.view.html'
 		}).
 
- 		state('community', {
-			url: '/community',
-			templateUrl: 'modules/core/views/community.client.view.html'
+ 		state('realworld', {
+			url: '/realworld',
+			templateUrl: 'modules/core/views/realworld.client.view.html'
 		}).
 
 			state('pricing', {
@@ -23,9 +23,9 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 			templateUrl: 'modules/core/views/pricing.client.view.html'
 		}).
 
-		state('welcome', {
-			url: '/welcome',
-			templateUrl: 'modules/core/views/welcome.client.view.html'
+		state('projects', {
+			url: '/projects',
+			templateUrl: 'modules/core/views/projects.client.view.html'
 		}).
 
        state('sitemap', {
@@ -48,6 +48,7 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 				url: '/faqs',
 				templateUrl: 'modules/core/views/faqs.client.view.html'
 			}).
+			//state('community', {})
 
         state('confirm', {
                 url: '/confirmwebstorm',
