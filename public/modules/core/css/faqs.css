@@ -1,0 +1,5 @@
+.faqs > div > p {
+    font-size: 1.3em;
+    text-align: justify;
+    line-height: 150%;
+}
