@@ -37,15 +37,15 @@ a, a:hover, a:focus {
   /*z-index: 0;*/
 }
 
-h2 {
-  font-family: Lato, sans-serif;
-  font-size: 4vw;
-  margin-left: 90px;
-  text-align: left;
-  position: relative;
-  top: 35%;
-  transform: translateY(-50%);
-}
+/*h2 {*/
+  /*font-family: Lato, sans-serif;*/
+  /*font-size: 4vw;*/
+  /*margin-left: 90px;*/
+  /*text-align: left;*/
+  /*position: relative;*/
+  /*top: 35%;*/
+  /*transform: translateY(-50%);*/
+/*}*/
 
 h3 {
   /*color: #d3d3d3;*/
@@ -155,9 +155,9 @@ h3.black {
   line-height: 150%;
 }
 
-div.row p.text-content:first-letter {
-    font-size: 4rem;
-}
+/*div.row p.text-content:first-letter {*/
+    /*font-size: 4rem;*/
+/*}*/
 
 .line-separator {
   border-bottom: 3px solid darkgray;
@@ -366,4 +366,10 @@ aside p {
 
 img {
     border-radius: 15px;
+}
+
+.vcenter {
+    display: inline-block;
+    vertical-align: middle;
+    float: none;
 }
