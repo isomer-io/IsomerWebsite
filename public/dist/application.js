@@ -160,7 +160,7 @@ angular.module('core').config([
       templateUrl: 'modules/core/views/header2.client.view.html'
     }).state('experience', {
       url: '/experience',
-      templateUrl: 'modules/core/views/experience.client.view.html'
+      templateUrl: 'modules/core/views/instructors.client.view.html'
     }).state('curriculum', {
       url: '/curriculum',
       templateUrl: 'modules/core/views/curriculum.client.view.html'

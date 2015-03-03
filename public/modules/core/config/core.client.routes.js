@@ -32,9 +32,9 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
                 url: '/sitemap',
                 templateUrl: 'modules/core/views/header2.client.view.html'
             }).
-       state('experience', {
-                url: '/experience',
-                templateUrl: 'modules/core/views/experience.client.view.html'
+       state('instructors', {
+                url: '/instructors',
+                templateUrl: 'modules/core/views/instructors.client.view.html'
             }).
        state('curriculum', {
                 url: '/curriculum',
@@ -48,7 +48,10 @@ angular.module('core').config(['$stateProvider', '$urlRouterProvider',
 				url: '/faqs',
 				templateUrl: 'modules/core/views/faqs.client.view.html'
 			}).
-			//state('community', {})
+			state('community', {
+				url: '/community',
+				templateUrl: 'modules/core/views/community.client.view.html'
+			}).
 
         state('confirm', {
                 url: '/confirmwebstorm',
