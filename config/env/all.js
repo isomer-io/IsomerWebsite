@@ -25,7 +25,9 @@ module.exports = {
 				'public/lib/angular-ui-router/release/angular-ui-router.js',
 				'public/lib/angular-ui-utils/ui-utils.js',
 				'public/lib/angular-bootstrap/ui-bootstrap-tpls.js',
-		            'public/lib/prefixfree/prefixfree.min.js'
+                'public/lib/prefixfree/prefixfree.min.js',
+                'public/lib/angulartics/src/angulartics.js',
+                'public/lib/angulartics/src/angulartics-segmentio.js'
             	]
 		},
 		css: [

@@ -56,4 +56,15 @@ module.exports = function(app) {
 
 	// Finish by binding the user middleware
 	app.param('userId', users.userByID);
+
+    /**
+     *
+     * @type {string} The API Key Found in Segment.io for Isomer.EDU
+     */
+    var segmentApiKey = 'ENTER_KEY';
+
+    app.route('/segmentApiKey')
+        .get(function(req,res) {
+            res.send(segmentApiKey);
+        });
 };
